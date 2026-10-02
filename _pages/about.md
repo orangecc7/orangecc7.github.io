@@ -11,7 +11,7 @@ redirect_from:
 <section class="intro" id="about-me" aria-labelledby="intro-heading">
   <h1 id="intro-heading">Hi, I'm <span>Orange</span><span class="intro-orange">🍊</span><span class="intro-period">.</span></h1>
   <p>I'm <strong>Yuechen Zhang</strong>, an undergraduate student at Jiangnan University (JNU) (2023–2027). My research interests lie in <strong>AIGC detection</strong> and <strong>LLM safety</strong>, with a focus on detecting AI-generated images and understanding risks in vision-language models.</p>
-  <p>I am advised by Associate Professor <a href="{{ site.author.advisor_scholar }}" target="_blank" rel="noopener noreferrer">Li Sun</a> at Beijing University of Posts and Telecommunications (BUPT), where my master's studies are planned for 2027–2030. My master's research will focus on <strong>LLM safety</strong> and exploratory work on <strong>world models</strong>.</p>
+  <p>I am advised by Associate Professor <a class="advisor-link" href="{{ site.author.advisor_scholar }}" target="_blank" rel="noopener noreferrer">Li Sun</a> at Beijing University of Posts and Telecommunications (BUPT), where my master's studies are planned for 2027–2030. My master's research will focus on <strong>LLM safety</strong> and exploratory work on <strong>world models</strong>.</p>
   <p>Feel free to get in touch about research or collaboration.</p>
 </section>
 
