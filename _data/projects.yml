@@ -1,0 +1,13 @@
+- id: voiceprint
+  name: VoicePrint
+  category: Voice cloning & speech synthesis
+  description: Clone a voice from a short audio sample, manage a personal voice library, and turn text into speech. Built with mobile and web interfaces, with cloud synthesis and local inference options.
+  stack: Flutter · Spring Boot · Python · CosyVoice
+  url: https://github.com/orangecc7/Voice
+  screenshots:
+    - label: Home
+      image: /images/voiceprint-home.png
+      alt: Original VoicePrint app home screen showing voice cloning shortcuts and the personal voice library
+      width: 1080
+      height: 2288
+      source: https://github.com/orangecc7/Voice/blob/master/figures/fig1.png

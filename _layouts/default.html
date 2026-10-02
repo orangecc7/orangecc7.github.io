@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+  <body{% unless page.author_profile %} class="page-without-sidebar"{% endunless %}>
+    <a class="skip-link" href="#main">Skip to content</a>
+    {% include masthead.html %}
+    <main id="main">
+      {% include sidebar.html %}
+      <article class="page">
+        <div class="page__inner-wrap"><div class="page__content">{{ content }}</div></div>
+      </article>
+    </main>
+    {% if page.author_profile %}
+    <dialog class="framework-dialog" aria-labelledby="framework-dialog-title">
+      <div class="framework-dialog-header"><h2 class="framework-dialog-title" id="framework-dialog-title">Research framework</h2><button class="framework-close" type="button" aria-label="Close framework">{% include icon.html name="close" %}</button></div>
+      <div class="framework-dialog-media"><p class="framework-image-status" role="status" aria-live="polite" hidden>Loading image…</p><img class="framework-dialog-image" alt=""></div>
+    </dialog>
+    {% endif %}
+    <footer class="profile-footer"><span>© {{ site.time | date: '%Y' }} {{ site.author.name }}.</span><span>Built with <a href="https://github.com/RayeRen/acad-homepage.github.io" target="_blank" rel="noopener noreferrer">AcadHomepage</a>.</span></footer>
+    {% include scripts.html %}
+  </body>
+</html>

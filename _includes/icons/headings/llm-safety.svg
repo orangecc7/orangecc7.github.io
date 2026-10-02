@@ -1,0 +1,10 @@
+<svg class="icon icon--heading icon--devil" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32">
+  <path d="M10 10C4 10 1.8 6.8 4 2.5c.8 3.3 4.6 2.8 6 7.5Zm12 0c6 0 8.2-3.2 6-7.5-.8 3.3-4.6 2.8-6 7.5Z" fill="var(--illustration-primary, #ef4444)"/>
+  <path d="M4 17.5C4 10.9 9.1 7 16 7s12 3.9 12 10.5S23.3 29 16 29 4 24.1 4 17.5Z" fill="var(--illustration-primary, #ef4444)"/>
+  <path d="M7 23c2.4 3 5.4 4.5 9 4.5S22.6 26 25 23c-1.7 4-4.8 6-9 6S8.7 27 7 23Z" fill="var(--illustration-depth, #b92d3b)"/>
+  <path d="M8 14.5 14 17c-1.2 3.2-5.6 2.9-6-2.5Zm16 0L18 17c1.2 3.2 5.6 2.9 6-2.5Z" fill="var(--illustration-paper, #fff5f1)"/>
+  <circle cx="11.2" cy="17.1" r="1.1" fill="var(--illustration-ink, #572030)"/>
+  <circle cx="20.8" cy="17.1" r="1.1" fill="var(--illustration-ink, #572030)"/>
+  <path d="M10 22c3.8 1.8 7.8 1.8 12 0-1.2 3.1-3.2 4.7-6 4.7S11.2 25.1 10 22Z" fill="var(--illustration-ink, #572030)"/>
+  <path d="m18 23.1 2.5-.4-1 2.4-1.5-2Z" fill="var(--illustration-paper, #fff5f1)"/>
+</svg>

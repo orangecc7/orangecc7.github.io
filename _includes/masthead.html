@@ -1,0 +1,10 @@
+<header class="masthead">
+  <div class="masthead__inner-wrap">
+    <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="Homepage">Homepage</a>
+    <nav class="site-navigation" aria-label="Main navigation">
+      {% for link in site.data.navigation.main %}<a href="{{ link.url }}">{{ link.title }}</a>{% endfor %}
+      <span class="nav-indicator" aria-hidden="true"></span>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false"><span class="theme-sun">{% include icon.html name="sun" %}</span><span class="theme-moon">{% include icon.html name="moon" %}</span></button>
+  </div>
+</header>

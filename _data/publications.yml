@@ -1,0 +1,55 @@
+- name: AIGC Detection
+  id: aigc-detection
+  papers:
+    - id: ra-det
+      short_name: RA-Det
+      title: "RA-Det: Towards Universal Detection of AI-Generated Images via Robustness Asymmetry"
+      venue: ICML 2026
+      role: Third author
+      image: /images/ra-det.png
+      image_alt: RA-Det framework with robustness probing and feature-space asymmetry
+      summary: A behavior-based detector that uses the different responses of natural and generated images to controlled perturbations.
+      paper: https://arxiv.org/abs/2603.01544
+    - id: wda-det
+      short_name: WDA-Det
+      title: "WDA-Det: Distribution-Aligned AI-Generated Image Detection via Wavelet Denoising"
+      venue: PRCV 2026
+      role: Second author
+      image: /images/wda-det.png
+      image_alt: WDA-Det framework showing wavelet denoising, evidence-aligned learning, and decision-level gating fusion
+      summary: Distribution-aligned image detection combining wavelet-denoised semantic predictions with residual forgery evidence.
+      code: https://github.com/orangecc7/WDA-Det
+    - id: mambaguard
+      short_name: MambaGuard
+      title: "MambaGuard: A CLIP-Mamba Approach for OOD Generated Image Detection"
+      venue: PRCV 2025
+      role: Co-first author
+      image: /images/mambaguard.png
+      image_alt: MambaGuard framework showing Mamba CLIP, Einstein FFT, and the disentangled residual branch
+      summary: CLIP-Mamba visual representations and spectral feature refinement for detecting images from unseen generators.
+      paper: https://link.springer.com/chapter/10.1007/978-981-95-5699-1_25
+      code: https://github.com/orangecc7/MambaGuard
+- name: LLM Safety
+  id: llm-safety
+  papers:
+    - id: cira
+      short_name: CIRA
+      title: "Still There, No Longer Seen: Exposing Compression-Induced Risk in Large Vision-Language Models"
+      venue: ICLR 2027
+      status: Under review
+      role: Co-first author
+      image: /images/cira.png
+      image_alt: CIRA overview showing compression-specific failures in vision-language models
+      summary: Investigating failures induced by visual-token compression through paired evaluation of full-token and compressed inference.
+      paper: https://arxiv.org/abs/2609.35002
+      code: https://github.com/orangecc7/CIRA
+    - id: ots-bench
+      short_name: OTS-Bench
+      title: "OTS-Bench: Revealing Order-to-Space Bias in Multimodal Image and Video Generation"
+      venue: AAAI 2027
+      status: Under review
+      role: Co-first author
+      image: /images/ots-bench.png
+      image_alt: OTS-Bench overview showing subject and action libraries and order-to-space bias evaluation
+      summary: A benchmark revealing how prompt order biases spatial layout and entity-role binding in multimodal generation.
+      paper: https://arxiv.org/abs/2603.03714

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-70 -70 140 140" width="160" height="160" role="img" aria-labelledby="title"><title>Orange mascot</title><circle r="66" fill="#fff0d9" /><g>
+ <path d="M-1-30 C-4-46 5-48 8-48" fill="none" stroke="#677b45" stroke-width="3.5" stroke-linecap="round" />
+ <path d="M2-35 C5-53 25-52 31-46 C22-34 9-30 2-35Z" fill="#7fab65" />
+ <path d="M3-35 C11-41 19-45 26-46" fill="none" stroke="#507944" stroke-width="1.5" />
+ <path d="M-34 1 C-36-19-21-32-4-30 C1-29 3-29 8-30 C28-33 39-15 35 6 C31 29 15 38-3 35 C-24 35-35 21-34 1Z" fill="#ffad54" />
+ <path d="M-26-10 C-23-19-16-23-10-23" fill="none" stroke="#ffcf8c" stroke-width="4" stroke-linecap="round" />
+ <g fill="none" stroke="#493524" stroke-width="2.6">
+  <rect x="-24" y="-4" width="19" height="15" rx="5" />
+  <rect x="5" y="-4" width="19" height="15" rx="5" />
+  <path d="M-5 1 Q0-2 5 1 M-29-1 L-24 1 M24 1 L29-1" />
+ </g>
+ <g fill="#493524"><circle cx="-14" cy="3" r="2" /><circle cx="14" cy="3" r="2" /></g>
+ <path d="M-5 19 Q0 24 6 19" fill="none" stroke="#493524" stroke-width="2.2" stroke-linecap="round" />
+ <g fill="#eb8645"><ellipse cx="-23" cy="14" rx="4" ry="2" /><ellipse cx="23" cy="14" rx="4" ry="2" /></g>
+</g>
+</svg>
