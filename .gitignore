@@ -3,5 +3,7 @@ _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
-vendor/
+# Installed gems; keep _sass/vendor source dependencies in Git.
+/vendor/
+/assets/js/vendor/
 .DS_Store
