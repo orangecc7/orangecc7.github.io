@@ -28,8 +28,10 @@ strong { font-weight: 700; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 .site-nav { position: sticky; top: 0; z-index: 50; min-height: 76px; background: #fff; border-bottom: 1px solid var(--line); }
 .nav-container { width: min(calc(100% - 60px), var(--width)); margin: auto; min-height: 76px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
-.site-brand { flex-shrink: 0; color: var(--blue); font: 700 16px/1.3 var(--heading); }
-.site-brand span { display: block; margin-top: 5px; color: var(--accent); font-size: 11px; font-weight: 600; letter-spacing: 1.8px; }
+.site-brand { display: inline-flex; align-items: center; gap: 11px; flex-shrink: 0; color: var(--blue); font: 700 16px/1.3 var(--heading); }
+.site-brand-mark { display: block; width: 44px; height: 44px; flex: 0 0 auto; }
+.site-brand-copy { display: block; }
+.site-brand .site-brand-edition { display: block; margin-top: 5px; color: var(--accent); font-size: 11px; font-weight: 600; letter-spacing: 1.8px; }
 .site-brand:hover { text-decoration: none; color: var(--blue); }
 .nav-links { display: flex; align-items: center; gap: 22px; }
 .nav-links a { position: relative; padding: 26px 0; color: var(--blue); font: 600 14px/24px var(--heading); transition: color .15s ease; }
@@ -107,8 +109,9 @@ strong { font-weight: 700; }
   .container, .reading-container { width: calc(100% - 36px); }
   .site-nav, .nav-container { min-height: 64px; }
   .nav-container { width: calc(100% - 36px); }
-  .site-brand { font-size: 15px; }
-  .site-brand span { margin-top: 3px; font-size: 11px; }
+  .site-brand { gap: 9px; font-size: 15px; }
+  .site-brand-mark { width: 38px; height: 38px; }
+  .site-brand .site-brand-edition { margin-top: 3px; font-size: 11px; }
   .menu-toggle { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px; width: 40px; height: 35px; padding: 7px; border: 1px solid var(--line); border-radius: 3px; background: #fff; cursor: pointer; }
   .menu-toggle span { display: block; width: 20px; height: 2px; background: var(--blue); }
   .nav-links { display: none; position: absolute; top: 64px; left: 0; width: 100%; align-items: stretch; flex-direction: column; gap: 0; padding: 8px 18px 13px; background: #fff; border-bottom: 1px solid var(--line); box-shadow: 0 9px 15px rgba(36,61,80,.05); }
