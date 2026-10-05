@@ -1,0 +1,237 @@
+/* People sections: an editorial extension of the workshop's slate/copper identity. */
+:root {
+  --people-muted: #657580;
+  --people-surface: #f4f7f8;
+}
+
+/* Keep the expanded navigation readable without crowding the brand. */
+.nav-container { width: min(calc(100% - 48px), 1240px); gap: 20px; }
+.nav-links { gap: 18px; }
+.nav-links a { white-space: nowrap; font-size: 13px; }
+
+#speakers .section-subtitle { margin-bottom: 34px; }
+.speaker-profile {
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 42px;
+  padding: 36px 0;
+  border-bottom: 0;
+}
+.speaker-profile + .speaker-profile { margin-top: 0; }
+.speaker-profile:last-child { border-bottom: 1px solid var(--line); }
+.speaker-photo-placeholder {
+  position: relative;
+  gap: 10px;
+  align-content: center;
+  background: var(--people-surface);
+}
+.portrait-initials {
+  color: var(--blue);
+  font: 500 42px/1.2 var(--heading);
+  letter-spacing: -2px;
+}
+.portrait-caption {
+  color: var(--people-muted);
+  font: 500 11px/1.6 var(--heading);
+}
+.section .speaker-name {
+  margin: 18px 0 7px;
+  font-size: 19px;
+  line-height: 1.4;
+  letter-spacing: -.4px;
+}
+.speaker-affiliation {
+  color: var(--accent);
+  font: 500 14px/1.7 var(--heading);
+}
+.speaker-details { gap: 24px; }
+.speaker-detail { padding: 0; border: 0; border-radius: 0; }
+.speaker-detail + .speaker-detail {
+  padding-top: 23px;
+  border-top: 1px solid var(--line);
+}
+.speaker-detail h4 {
+  margin: 0 0 14px;
+  color: var(--accent);
+  font: 600 14px/1.6 var(--heading);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.speaker-detail .speaker-talk-title {
+  margin-bottom: 12px;
+  color: var(--blue);
+  font: 600 21px/1.5 var(--heading);
+  letter-spacing: -.4px;
+}
+.content-pending { color: var(--people-muted); font-style: italic; }
+.speaker-detail p { max-width: 68ch; font-size: 16px; line-height: 1.85; }
+
+/* Three columns give all nine organizers equal visual weight. */
+#organizers { background: var(--soft); }
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: start;
+  margin-top: 34px;
+}
+.organizer.person-card {
+  width: auto;
+  min-width: 0;
+  padding: 23px 22px 0;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: #fff;
+  text-align: left;
+}
+.person-card-heading {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  align-items: center;
+  gap: 15px;
+  min-height: 84px;
+  padding-bottom: 21px;
+}
+.person-photo {
+  display: block;
+  width: 64px;
+  height: 76px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+.person-photo-placeholder {
+  display: grid;
+  place-items: center;
+  background: var(--people-surface);
+  color: var(--blue);
+  font: 500 21px/1 var(--heading);
+  border: 1px solid var(--line);
+}
+.organizer.person-card h3 {
+  margin: 0 0 7px;
+  font-size: 18px;
+  line-height: 1.45;
+  letter-spacing: -.35px;
+  overflow-wrap: anywhere;
+}
+.organizer.person-card .person-identity p {
+  margin: 0;
+  color: var(--body);
+  font: 500 14px/1.7 var(--heading);
+  overflow-wrap: anywhere;
+}
+.person-bio { border-top: 1px solid var(--line); }
+.person-bio summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 53px;
+  color: var(--blue);
+  font: 600 14px/1.6 var(--heading);
+  cursor: pointer;
+  list-style: none;
+}
+.person-bio summary::-webkit-details-marker { display: none; }
+.person-bio summary::marker { content: ""; }
+.person-bio summary:hover { color: var(--accent); }
+.person-bio summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.bio-toggle {
+  color: var(--accent);
+  font: 400 22px/1 var(--heading);
+  transition: transform .15s ease;
+}
+.person-bio[open] .bio-toggle { transform: rotate(45deg); }
+.organizer.person-card .person-bio p {
+  max-width: none;
+  margin: 0 0 22px;
+  color: var(--body);
+  font-size: 15px;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+.organizer.person-card .person-bio .content-pending { color: var(--people-muted); }
+
+/* PC chairs are presented as a separate group even when roles overlap. */
+.pc-section { border-top: 1px solid var(--line); }
+.pc-chair-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 34px;
+}
+.pc-chair {
+  padding: 4px 0 4px 20px;
+  border-left: 2px solid var(--accent);
+  min-width: 0;
+}
+.section .pc-chair h3 {
+  margin: 0 0 8px;
+  color: var(--blue);
+  font-size: 18px;
+  line-height: 1.4;
+}
+.pc-chair p { margin: 0; font: 500 14px/1.7 var(--heading); }
+
+@media (min-width: 768px) and (max-width: 1100px) {
+  .nav-container { width: calc(100% - 36px); gap: 14px; }
+  .site-brand { gap: 8px; font-size: 14px; }
+  .brand-mark { width: 32px; height: 32px; }
+  .nav-links { gap: 11px; }
+  .nav-links a { font-size: 12px; }
+}
+@media (max-width: 1000px) {
+  .people-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 767px) {
+  .nav-container { width: calc(100% - 36px); gap: 16px; }
+  .nav-links { gap: 0; }
+  .nav-links a { font-size: 15px; }
+  .speaker-profile { grid-template-columns: 1fr; gap: 27px; padding: 30px 0; }
+  .speaker-identity { width: min(180px, 100%); margin-inline: auto; }
+  .speaker-details { gap: 22px; }
+  .speaker-detail .speaker-talk-title { font-size: 19px; }
+  .people-grid { grid-template-columns: 1fr; gap: 18px; margin-top: 28px; }
+  .organizer.person-card { padding: 22px 22px 0; }
+  .pc-chair-grid { grid-template-columns: 1fr; gap: 25px; margin-top: 28px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bio-toggle { transition: none; }
+}
+
+/* Scholar and homepage portraits share the existing people layout. */
+.portrait-link { display: block; width: fit-content; border-radius: 3px; }
+.speaker-identity .portrait-link { width: 100%; }
+.person-photo, .speaker-photo { object-position: center 30%; }
+.person-identity h3 a, .speaker-name a { color: inherit; text-decoration: none; }
+.person-identity h3 a:hover, .speaker-name a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 4px; }
+.portrait-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+/* Speaker biographies: a quiet accordion above the always-visible talk. */
+.speaker-bio { border: 1px solid var(--line); border-radius: 3px; background: var(--people-surface); }
+.speaker-bio summary { min-height: 58px; padding: 12px 20px; }
+.speaker-bio-label { font-size: 15px; }
+.speaker-bio-action { display: inline-flex; align-items: center; gap: 13px; margin-left: auto; color: var(--accent); font-size: 13px; white-space: nowrap; }
+.bio-when-open { display: none; }
+.speaker-bio[open] .bio-when-open { display: inline; }
+.speaker-bio[open] .bio-when-closed { display: none; }
+.speaker-bio[open] summary { border-bottom: 1px solid var(--line); }
+.speaker-bio-content { padding: 20px 20px 4px; background: #fff; }
+.speaker-bio-content p { margin: 0 0 18px; overflow-wrap: anywhere; }
+.speaker-bio[open] .speaker-bio-content { animation: bio-reveal .18s ease-out; }
+@keyframes bio-reveal { from { opacity: 0; } to { opacity: 1; } }
+@media (max-width: 767px) {
+  .speaker-bio summary { padding-inline: 16px; }
+  .speaker-bio-content { padding-inline: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .speaker-bio[open] .speaker-bio-content { animation: none; }
+}
+
+/* Compact portraits carry the same visual language into the PC chairs. */
+.pc-chair-heading { display: grid; grid-template-columns: 56px minmax(0, 1fr); align-items: center; gap: 16px; }
+.person-photo.pc-photo { width: 56px; height: 64px; }
+.pc-chair h3 a { color: inherit; text-decoration: none; }
+.pc-chair h3 a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 4px; }
+
+/* Keep the subject visible in the wider personal-homepage photograph. */
+.person-photo.mengyao-photo { object-position: 85% center; }
