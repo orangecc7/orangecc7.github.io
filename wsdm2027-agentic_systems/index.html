@@ -3,15 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Proposed WSDM 2027 workshop on Management of Agentic Systems: Databases, Graphs and the Future of Web Intelligence.">
+  <meta name="description" content="WSDM 2027 workshop on Management of Agentic Systems: Databases, Graphs and the Future of Web Intelligence.">
   <link rel="canonical" href="https://orangecc7.github.io/wsdm2027-agentic_systems/">
   <link rel="icon" type="image/png" sizes="64x64" href="assets/agentic-mark.png">
   <link rel="icon" type="image/svg+xml" sizes="any" href="assets/agentic-mark.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Management of Agentic Systems: Databases, Graphs and the Future of Web Intelligence">
+  <meta property="og:description" content="WSDM 2027 workshop on agentic systems, database foundations, graph mining and Web intelligence. 19 February 2027, Hong Kong.">
+  <meta property="og:url" content="https://orangecc7.github.io/wsdm2027-agentic_systems/">
+  <meta property="og:image" content="https://orangecc7.github.io/wsdm2027-agentic_systems/assets/hong-kong-panorama.jpg">
+  <meta property="og:image:alt" content="Hong Kong Victoria Harbour">
   <meta name="theme-color" content="#243d50">
   <title>Management of Agentic Systems: Databases, Graphs and the Future of Web Intelligence | WSDM 2027</title>
   <link rel="stylesheet" href="assets/fonts.css">
-  <link rel="stylesheet" href="style.css?v=20261005">
-  <link rel="stylesheet" href="people.css?v=20261005">
+  <link rel="stylesheet" href="style.css?v=20261008-release">
+  <link rel="stylesheet" href="people.css?v=20261008-release">
   <script src="script.js" defer></script>
 </head>
 <body id="top">
@@ -24,12 +30,12 @@
       </a>
       <button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button>
       <div class="nav-links" id="navigation">
-        <a href="#intro">Intro</a><a href="#program">Program</a><a href="#speakers">Speakers</a><a href="#cfp">CFP</a><a href="#dates">Dates</a><a href="#organizers">Organizers</a><a href="#pc-chairs">PC Chairs</a>
+        <a href="#intro">Overview</a><a href="#program">Program</a><a href="#cfp">CFP</a><a href="#dates">Dates</a><a href="#speakers">Speakers</a><a href="#organizers">Organizers</a><a href="#pc-chairs">PC Chairs</a>
         <a href="https://wsdm-conference.org/2027/" target="_blank" rel="noopener noreferrer">WSDM ’27 <span aria-hidden="true">↗</span></a>
       </div>
     </div>
   </nav>
-  <header class="panorama" aria-label="Hong Kong, proposed host city">
+  <header class="panorama" aria-label="Hong Kong skyline">
     <img src="assets/hong-kong-panorama.jpg" alt="Panoramic view of Hong Kong’s Victoria Harbour" width="4255" height="1166" fetchpriority="high">
     <p class="image-credit"><a href="https://commons.wikimedia.org/wiki/File:Hong_Kong_Victoria_Harbour_Pano_View_from_ICC_201105.jpg" target="_blank" rel="noopener noreferrer" title="Hong Kong Victoria Harbour Pano View from ICC; cropped for display">Photo: WiNG / Wikipedia user Wpcpey</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a></p>
   </header>
@@ -37,71 +43,116 @@
     <section class="workshop-title" aria-labelledby="workshop-title">
       <div class="container title-layout">
         <div class="title-copy">
-          <p class="workshop-subtitle">Proposed Workshop at WSDM 2027</p>
+          <p class="workshop-subtitle">WSDM 2027 Workshop</p>
           <h1 id="workshop-title">Management of Agentic Systems:<br><span>Databases, Graphs and the Future of Web Intelligence</span></h1>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#cfp">Call for Papers <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="#program">View Program <span aria-hidden="true">↓</span></a>
+          </div>
         </div>
         <aside class="title-details" aria-label="Workshop details">
-          <p class="conference-line">Proposed for <a href="https://wsdm-conference.org/2027/" target="_blank" rel="noopener noreferrer">WSDM 2027</a><span>February 19, 2027<br>Hong Kong</span></p>
-          <p class="proposal-note"><span class="status-label">Proposal stage</span> Acceptance, speakers and the final program are to be confirmed.</p>
+          <p class="event-conference">WSDM 2027</p>
+          <dl class="event-facts">
+            <div><dt>Date</dt><dd><time datetime="2027-02-19">19 February 2027</time></dd></div>
+            <div><dt>Location</dt><dd>Hong Kong</dd></div>
+          </dl>
+          <a class="conference-link" href="https://wsdm-conference.org/2027/" target="_blank" rel="noopener noreferrer">Conference website <span aria-hidden="true">↗</span></a>
         </aside>
       </div>
     </section>
     <section class="section introduction" id="intro" aria-labelledby="intro-heading">
       <div class="reading-container">
-        <h2 id="intro-heading">Introduction</h2>
+        <h2 id="intro-heading">Overview</h2>
         <div class="abstract">
 <p>Built on large language models and advanced through skill design, agent harnesses, and workflow engineering, agentic systems are redefining Web intelligence and transforming how we search, analyze, create, and conduct scientific research. However, their potential remains limited by weak grounding, inconsistent memory, brittle tool use, inefficient execution, opaque reasoning, and insufficient governance. Responding to this urgent need, this workshop discusses the evolution and management of agentic systems through the lenses of database research and graph data mining.</p>
 <p>Database principles and techniques—including declarative interfaces, query and workflow optimization, transactional state management, provenance, access control, and auditability—can make agent workflows more reliable, scalable, and accountable. Graph techniques complement these foundations by strengthening agent memory, inter-agent communication, retrieval augmentation, and white-box reasoning, while supporting recursive self-improvement through iterative hypothesis generation, experimentation, and validation. To capture the intrinsic structure, hierarchy and shape, Riemannian geometry enables agents to recognize and reason about complex topological and relational patterns.</p>
 <p>The workshop also critically examines the capability boundaries of agentic systems, from information retrieval to scientific research, with an emphasis on safety constraints and responsible governance. The program will feature invited talks, paper and demo presentations, panel discussions, and interactive breakout sessions. By bringing together researchers and practitioners from databases, graph mining, geometric learning, agentic AI, and trustworthy AI, we aim to establish a shared agenda for managing agentic systems and shaping the next generation of Web intelligence powered by reliable, capable, and well-governed agents.</p>
         </div>
-        <h3 class="topics-heading">Topics of Interest</h3>
-        <p>The proposed workshop explores the following themes:</p>
-        <ul class="topics-list">
-          <li><strong>Database foundations for agentic systems:</strong> declarative interfaces, query and workflow optimization, transactional state management, and scalable execution.</li>
-          <li><strong>Graph-grounded memory and retrieval:</strong> graph representations for memory, retrieval augmentation, provenance, and relational context.</li>
-          <li><strong>Agent communication and coordination:</strong> inter-agent communication, tool use, orchestration, and dependable multi-agent workflows.</li>
-          <li><strong>Geometric reasoning:</strong> Riemannian geometry and geometric learning for hierarchy, topology, and structured relations.</li>
-          <li><strong>Recursive self-improvement:</strong> iterative hypothesis generation, experimentation, validation, and agent system improvement.</li>
-          <li><strong>Capability boundaries and governance:</strong> evaluation, white-box reasoning, access control, auditability, safety constraints, and responsible deployment.</li>
-        </ul>
       </div>
     </section>
     <section class="section section-gray" id="program" aria-labelledby="program-heading">
       <div class="reading-container">
         <h2 id="program-heading">Workshop Program</h2>
-        <p class="section-subtitle">Proposed activities · detailed schedule to be announced</p>
+        <p class="section-subtitle">All times in Hong Kong (UTC+8)</p>
         <div class="table-scroll">
           <table class="program-table">
-            <caption class="sr-only">Proposed workshop activities</caption>
-            <thead><tr><th scope="col">Activity</th><th scope="col">Focus</th></tr></thead>
+            <caption class="sr-only">Workshop schedule in Hong Kong local time</caption>
+            <thead><tr><th scope="col">Time</th><th scope="col">Activity</th></tr></thead>
             <tbody>
-              <tr><th scope="row">Invited Talks</th><td>Perspectives from databases, graph mining, geometric learning and trustworthy agentic AI.</td></tr>
-              <tr><th scope="row">Paper &amp; Demo Presentations</th><td>Emerging methods, working systems, benchmarks and lessons from real deployments.</td></tr>
-              <tr><th scope="row">Panel Discussion</th><td>Capability boundaries and the foundations needed for reliable Web intelligence.</td></tr>
-              <tr><th scope="row">Interactive Breakout Sessions</th><td>Small-group discussion to identify shared research priorities and concrete open questions.</td></tr>
+              <tr><th scope="row">08:30–10:00</th><td><strong>Invited Talks I–II</strong><br>30-minute talk + 15-minute Q&amp;A each</td></tr>
+              <tr><th scope="row">10:00–10:30</th><td><strong>Coffee Break</strong></td></tr>
+              <tr><th scope="row">10:30–12:00</th><td><strong>Invited Talk III; Paper Presentations</strong><br>One invited talk, four paper presentations, and best paper announcement</td></tr>
+              <tr><th scope="row">12:00–13:30</th><td><strong>Lunch Break</strong></td></tr>
+              <tr><th scope="row">13:30–15:00</th><td><strong>Invited Talks IV–V</strong><br>30-minute talk + 15-minute Q&amp;A each</td></tr>
+              <tr><th scope="row">15:00–15:30</th><td><strong>Coffee Break</strong></td></tr>
+              <tr><th scope="row">15:30–17:00</th><td><strong>Invited Talk VI; Panel Discussion</strong><br>30-minute invited talk and 30-minute panel</td></tr>
             </tbody>
           </table>
         </div>
-        <p class="section-note">Session times, presentation details and the venue room will be announced after acceptance.</p>
+        <p class="section-note">Detailed program to be announced. Schedule subject to change.</p>
+      </div>
+    </section>
+    <section class="section section-soft" id="cfp" aria-labelledby="cfp-heading">
+      <div class="reading-container">
+        <div class="cfp-header">
+          <h2 id="cfp-heading">Call for Papers</h2>
+          <p class="cfp-status">Submission details to be announced.</p>
+        </div>
+        <p class="cfp-lead">We invite research papers, short or position papers, and demo contributions on the management of agentic systems. Topics include, but are not limited to:</p>
+        <ol class="cfp-topics" role="list">
+          <li><div class="topic-copy"><h3>Workflow management</h3><p>declarative interfaces, execution and query optimization, resource allocation, checkpoints, and recovery.</p></div></li>
+          <li><div class="topic-copy"><h3>Persistent state and memory</h3><p>consistent updates, temporal knowledge, memory consolidation, and graph-based retrieval with traceable evidence.</p></div></li>
+          <li><div class="topic-copy"><h3>Multi-agent coordination</h3><p>shared knowledge, concurrent updates, communication graphs, task dependencies, and reliable tool use.</p></div></li>
+          <li><div class="topic-copy"><h3>Geometric representations and reasoning</h3><p>Riemannian and hyperbolic methods for hierarchical memory, relational structure, and retrieval.</p></div></li>
+          <li><div class="topic-copy"><h3>Scientific workflows and self-improvement</h3><p>hypothesis and experiment management, validation, reproducibility, and controlled adaptation.</p></div></li>
+          <li><div class="topic-copy"><h3>Evaluation and governance</h3><p>capability boundaries, failure analysis, provenance, access control, human oversight, and quality–cost trade-offs.</p></div></li>
+        </ol>
+        <div class="submission-info">
+          <h3>Submission Information</h3>
+          <p>Formatting guidelines and the submission link will be announced here.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section section-gray" id="dates" aria-labelledby="dates-heading">
+      <div class="reading-container">
+        <h2 id="dates-heading">Key Dates</h2>
+        <p class="section-subtitle">Submission timeline and workshop date</p>
+        <dl class="milestone-list">
+          <div class="milestone">
+            <dt>Paper submission</dt>
+            <dd><time datetime="2026-11-30" class="milestone-date"><span class="milestone-day">30</span><span class="milestone-month">Nov<span class="milestone-year">2026</span></span></time><span class="milestone-note">Official latest date*</span></dd>
+          </div>
+          <div class="milestone">
+            <dt>Author notification</dt>
+            <dd><time datetime="2026-12-18" class="milestone-date"><span class="milestone-day">18</span><span class="milestone-month">Dec<span class="milestone-year">2026</span></span></time><span class="milestone-note">Official latest date*</span></dd>
+          </div>
+          <div class="milestone">
+            <dt>Camera-ready papers</dt>
+            <dd><span class="milestone-pending">To be announced</span></dd>
+          </div>
+          <div class="milestone">
+            <dt>Workshop day</dt>
+            <dd><time datetime="2027-02-19" class="milestone-date"><span class="milestone-day">19</span><span class="milestone-month">Feb<span class="milestone-year">2027</span></span></time></dd>
+          </div>
+        </dl>
+        <p class="section-note">*Latest dates permitted by WSDM; workshop deadlines may be earlier. Deadlines are 23:59 Anywhere on Earth (AoE). <a href="https://wsdm-conference.org/2027/cfworkshops.html" target="_blank" rel="noopener noreferrer">Official dates ↗</a></p>
       </div>
     </section>
     <section class="section" id="speakers" aria-labelledby="speakers-heading">
       <div class="reading-container">
         <h2 id="speakers-heading">Invited Speakers</h2>
-        <p class="section-subtitle">Speaker biographies and talk details will be published here as they become available.</p>
         <article class="speaker-profile" aria-labelledby="speaker-1-name">
           <div class="speaker-identity">
-            <!-- Portrait from the linked Google Scholar profile. -->
             <a class="portrait-link" href="https://scholar.google.com/citations?user=IKgiD0AAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Raymond Chi-Wing Wong on Google Scholar"><img class="speaker-photo" src="assets/people/raymond-wong.jpg" alt="Raymond Chi-Wing Wong" loading="lazy" decoding="async"></a>
             <h3 class="speaker-name" id="speaker-1-name"><a href="https://scholar.google.com/citations?user=IKgiD0AAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Raymond Chi-Wing Wong</a></h3>
-            <p class="speaker-affiliation">HKUST</p>
+            <p class="speaker-affiliation">Hong Kong University of Science and Technology<br>Hong Kong</p>
           </div>
           <div class="speaker-details">
             <details class="speaker-detail person-bio speaker-bio" name="speaker-biographies">
               <summary id="speaker-1-bio"><span class="speaker-bio-label">Biography</span><span class="speaker-bio-action"><span class="bio-when-closed">Read bio</span><span class="bio-when-open">Close bio</span><span class="bio-toggle" aria-hidden="true">+</span></span><span class="sr-only"> of Raymond Chi-Wing Wong</span></summary>
               <div class="speaker-bio-content">
-              <p class="content-pending">Biography forthcoming.</p>
-                          </div>
+                <p class="content-pending">Biography forthcoming.</p>
+              </div>
             </details>
             <section class="speaker-detail" aria-labelledby="speaker-1-talk">
               <h4 id="speaker-1-talk">Talk Introduction</h4>
@@ -112,17 +163,16 @@
         </article>
         <article class="speaker-profile" aria-labelledby="speaker-2-name">
           <div class="speaker-identity">
-            <!-- Portrait from the linked Google Scholar profile. -->
             <a class="portrait-link" href="https://scholar.google.com/citations?user=_Pvgwd0AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Yang Liu on Google Scholar"><img class="speaker-photo" src="assets/people/yang-liu.jpg" alt="Yang Liu" loading="lazy" decoding="async"></a>
             <h3 class="speaker-name" id="speaker-2-name"><a href="https://scholar.google.com/citations?user=_Pvgwd0AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Yang Liu</a></h3>
-            <p class="speaker-affiliation">NTU</p>
+            <p class="speaker-affiliation">Nanyang Technological University<br>Singapore</p>
           </div>
           <div class="speaker-details">
             <details class="speaker-detail person-bio speaker-bio" name="speaker-biographies">
               <summary id="speaker-2-bio"><span class="speaker-bio-label">Biography</span><span class="speaker-bio-action"><span class="bio-when-closed">Read bio</span><span class="bio-when-open">Close bio</span><span class="bio-toggle" aria-hidden="true">+</span></span><span class="sr-only"> of Yang Liu</span></summary>
               <div class="speaker-bio-content">
-              <p class="content-pending">Biography forthcoming.</p>
-                          </div>
+                <p class="content-pending">Biography forthcoming.</p>
+              </div>
             </details>
             <section class="speaker-detail" aria-labelledby="speaker-2-talk">
               <h4 id="speaker-2-talk">Talk Introduction</h4>
@@ -133,17 +183,18 @@
         </article>
         <article class="speaker-profile" aria-labelledby="speaker-3-name">
           <div class="speaker-identity">
-            <!-- Portrait from the linked Google Scholar profile. -->
             <a class="portrait-link" href="https://scholar.google.com/citations?user=iHevumsAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Jeffrey Xu Yu on Google Scholar"><img class="speaker-photo" src="assets/people/jeffrey-yu.jpg" alt="Jeffrey Xu Yu" loading="lazy" decoding="async"></a>
             <h3 class="speaker-name" id="speaker-3-name"><a href="https://scholar.google.com/citations?user=iHevumsAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Jeffrey Xu Yu</a></h3>
-            <p class="speaker-affiliation">HKUST(GZ)</p>
+            <p class="speaker-affiliation">Hong Kong University of Science and Technology (Guangzhou)<br>China</p>
           </div>
           <div class="speaker-details">
             <details class="speaker-detail person-bio speaker-bio" name="speaker-biographies">
               <summary id="speaker-3-bio"><span class="speaker-bio-label">Biography</span><span class="speaker-bio-action"><span class="bio-when-closed">Read bio</span><span class="bio-when-open">Close bio</span><span class="bio-toggle" aria-hidden="true">+</span></span><span class="sr-only"> of Jeffrey Xu Yu</span></summary>
               <div class="speaker-bio-content">
-              <p class="content-pending">Biography forthcoming.</p>
-                          </div>
+                <p>Dr. Jeffrey Xu Yu is a Professor of Data Science and Analytics Thrust, HKUST(GZ). His current main research interests include graph algorithms and systems, graph neural networks, vector databases, query processing and optimization.</p>
+                <p>Dr. Yu served/serves in over 300 organization committees and program committees in international conferences/workshops including the PC Co-chair of APWeb’04, WAIM’06, APWeb/WAIM’07, WISE’09, PAKDD’10, DASFAA’11, ICDM’12, NDBC’13, ADMA’14, CIKM’15, Bigcomp’17, DSAA’19 and CIKM’19, and conference general co-chair of APWeb’13 and ICDM’18.</p>
+                <p>Dr. Yu served as an Information Director and a member in ACM SIGMOD executive committee (2007–2011), an associate editor of IEEE Transactions on Knowledge and Data Engineering (2004–2008), an associate editor in VLDB Journal (2007–2013), and the chair of the steering committee in Asia Pacific Web Conference (2013–2016). Currently, he serves as associate editor in ACM Transactions on Database Systems, WWW Journal, the International Journal of Cooperative Information Systems, the Journal of Information Processing, and Journal on Health Information Science and Systems.</p>
+              </div>
             </details>
             <section class="speaker-detail" aria-labelledby="speaker-3-talk">
               <h4 id="speaker-3-talk">Talk Introduction</h4>
@@ -154,20 +205,20 @@
         </article>
         <article class="speaker-profile" aria-labelledby="speaker-4-name">
           <div class="speaker-identity">
-            <!-- Portrait from the linked Google Scholar profile. -->
             <a class="portrait-link" href="https://scholar.google.com/citations?user=qBHsQ04AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Dejing Dou on Google Scholar"><img class="speaker-photo" src="assets/people/dejing-dou.jpg" alt="Dejing Dou" loading="lazy" decoding="async"></a>
             <h3 class="speaker-name" id="speaker-4-name"><a href="https://scholar.google.com/citations?user=qBHsQ04AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Dejing Dou</a></h3>
-            <p class="speaker-affiliation">Fudan</p>
+            <p class="speaker-affiliation">Fudan University<br>China</p>
+            <p class="speaker-role">Distinguished Professor</p>
           </div>
           <div class="speaker-details">
             <details class="speaker-detail person-bio speaker-bio" name="speaker-biographies">
               <summary id="speaker-4-bio"><span class="speaker-bio-label">Biography</span><span class="speaker-bio-action"><span class="bio-when-closed">Read bio</span><span class="bio-when-open">Close bio</span><span class="bio-toggle" aria-hidden="true">+</span></span><span class="sr-only"> of Dejing Dou</span></summary>
               <div class="speaker-bio-content">
-              <p>Dejing Dou is a Distinguished Professor at Fudan University, the Chief Scientist of BEDI Cloud, and an Adjunct Professor at Tsinghua University. He was the Chief Data Scientist, Partner and Vice President at BCG in Greater China. He was the Head of Big Data Lab (BDL) and Business Intelligence Lab (BIL) at Baidu Research. He was also a tenured Full Professor at the Computer and Information Science Department at the University of Oregon and led the Advanced Integration and Mining (AIM) Lab. He was the Director of the NSF IUCRC Center for Big Learning (CBL) from 2018 to 2020 and a visiting Associate Professor at Stanford Center for Biomedical Informatics Research during 2012-2013.</p>
-              <p>Prof. Dou received his bachelor's degree from Tsinghua University, China in 1996 and his Ph.D. degree from Yale University in 2004. His research areas include artificial intelligence, data mining, data integration, NLP, and health informatics. He has applied his research in applications from various domains including clean energy, EHR data analysis, drug design, finance, product differentiation, smart city, and social behavior and health.</p>
-              <p>Dejing Dou has published more than 300 research papers, some of which appear in prestigious conferences and journals such as AAAI, IJCAI, ICML, NeurIPS, ICLR, KDD, ICDM, ACL, EMNLP, CVPR, ICCV, CIKM, ISWC, AIJ, JMLR, TPAMI, TKDE, TKDD, KAIS, JIIS, and Nature Sustainability, with more than 17,000 Google Scholar citations (H-index 68). His papers received the KAIS 2025 and DEXA 2015 best paper awards. His KDD 2007 paper was nominated for the best research paper award, and his COLING 2018 paper was selected as an Area Chair Favorite (excellent).</p>
-              <p>He is on the Editorial Boards of Journal on Data Semantics, Journal of Intelligent Information Systems, and PLOS ONE. He is an Editor-in-Chief of AIMS Electronic Research Archive. He has served as a program committee member for major international conferences and as a program co-chair for six of them. He has received over $5 million in PI research grants from the NSF and the NIH. Dejing Dou is a senior member of AAAI, ACM, and IEEE.</p>
-                          </div>
+                <p>Dejing Dou is a Distinguished Professor at Fudan University, the Chief Scientist of BEDI Cloud, and an Adjunct Professor at Tsinghua University. He was the Chief Data Scientist, Partner and Vice President at BCG in Greater China. He was the Head of Big Data Lab (BDL) and Business Intelligence Lab (BIL) at Baidu Research. He was also a tenured Full Professor at the Computer and Information Science Department at the University of Oregon and led the Advanced Integration and Mining (AIM) Lab. He was the Director of the NSF IUCRC Center for Big Learning (CBL) from 2018 to 2020 and a visiting Associate Professor at Stanford Center for Biomedical Informatics Research during 2012-2013.</p>
+                <p>Prof. Dou received his bachelor&#x27;s degree from Tsinghua University, China in 1996 and his Ph.D. degree from Yale University in 2004. His research areas include artificial intelligence, data mining, data integration, NLP, and health informatics. He has applied his research in applications from various domains including clean energy, EHR data analysis, drug design, finance, product differentiation, smart city, and social behavior and health.</p>
+                <p>Dejing Dou has published more than 300 research papers, some of which appear in prestigious conferences and journals such as AAAI, IJCAI, ICML, NeurIPS, ICLR, KDD, ICDM, ACL, EMNLP, CVPR, ICCV, CIKM, ISWC, AIJ, JMLR, TPAMI, TKDE, TKDD, KAIS, JIIS, and Nature Sustainability, with more than 17,000 Google Scholar citations (H-index 68). His papers received the KAIS 2025 and DEXA 2015 best paper awards. His KDD 2007 paper was nominated for the best research paper award, and his COLING 2018 paper was selected as an Area Chair Favorite (excellent).</p>
+                <p>He is on the Editorial Boards of Journal on Data Semantics, Journal of Intelligent Information Systems, and PLOS ONE. He is an Editor-in-Chief of AIMS Electronic Research Archive. He has served as a program committee member for major international conferences and as a program co-chair for six of them. He has received over $5 million in PI research grants from the NSF and the NIH. Dejing Dou is a senior member of AAAI, ACM, and IEEE.</p>
+              </div>
             </details>
             <section class="speaker-detail" aria-labelledby="speaker-4-talk">
               <h4 id="speaker-4-talk">Talk Introduction</h4>
@@ -176,35 +227,73 @@
             </section>
           </div>
         </article>
-      </div>
-    </section>
-    <section class="section section-soft" id="cfp" aria-labelledby="cfp-heading">
-      <div class="reading-container">
-        <h2 id="cfp-heading">Call for Papers</h2>
-        <p class="section-subtitle">The formal call will be published if the workshop is accepted.</p>
-        <p>We expect contributions that connect agent capabilities with reliable management and evaluation, including research on:</p>
-        <ul>
-          <li>Agent workflow design, optimization and execution</li>
-          <li>Graph-based memory, retrieval and white-box reasoning</li>
-          <li>Geometric representations of relational or hierarchical structure</li>
-          <li>Evaluation, provenance, safety and governance of agentic systems</li>
-        </ul>
-        <h3>Submission Information</h3>
-        <p>Paper types, page limits, formatting requirements, review policies, publication arrangements and the submission link will be announced after the proposal decision.</p>
-        <p>For conference requirements, please see the <a href="https://wsdm-conference.org/2027/cfworkshops.html" target="_blank" rel="noopener noreferrer">official WSDM 2027 Call for Workshops</a>.</p>
-      </div>
-    </section>
-    <section class="section section-gray" id="dates" aria-labelledby="dates-heading">
-      <div class="reading-container">
-        <h2 id="dates-heading">Key Dates</h2>
-        <p class="section-subtitle">Conference milestones from the WSDM 2027 workshop call</p>
-        <dl class="date-list">
-          <div><dt>Workshop proposal deadline</dt><dd>October 10, 2026 <span>· 11:59 pm AoE</span></dd></div>
-          <div><dt>Proposal notification</dt><dd>October 15, 2026</dd></div>
-          <div><dt>Workshop website &amp; CFP</dt><dd>October 25, 2026 <span>· if accepted</span></dd></div>
-          <div><dt>Workshop day</dt><dd>February 19, 2027</dd></div>
-        </dl>
-        <p class="section-note">Paper submission and notification dates for this workshop are to be confirmed. Source: <a href="https://wsdm-conference.org/2027/cfworkshops.html" target="_blank" rel="noopener noreferrer">WSDM 2027 Call for Workshops</a>.</p>
+        <article class="speaker-profile" aria-labelledby="speaker-5-name">
+          <div class="speaker-identity">
+            <a class="portrait-link" href="https://scholar.google.com/citations?user=s3lQL7YAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Hong Cheng on Google Scholar"><img class="speaker-photo" src="assets/people/hong-cheng.jpg" alt="Hong Cheng" loading="lazy" decoding="async"></a>
+            <h3 class="speaker-name" id="speaker-5-name"><a href="https://scholar.google.com/citations?user=s3lQL7YAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Hong Cheng</a></h3>
+            <p class="speaker-affiliation">The Chinese University of Hong Kong<br>Hong Kong</p>
+            <p class="speaker-role">Department Chair</p>
+          </div>
+          <div class="speaker-details">
+            <details class="speaker-detail person-bio speaker-bio" name="speaker-biographies">
+              <summary id="speaker-5-bio"><span class="speaker-bio-label">Biography</span><span class="speaker-bio-action"><span class="bio-when-closed">Read bio</span><span class="bio-when-open">Close bio</span><span class="bio-toggle" aria-hidden="true">+</span></span><span class="sr-only"> of Hong Cheng</span></summary>
+              <div class="speaker-bio-content">
+                <p class="content-pending">Biography forthcoming.</p>
+              </div>
+            </details>
+            <section class="speaker-detail" aria-labelledby="speaker-5-talk">
+              <h4 id="speaker-5-talk">Talk Introduction</h4>
+              <p class="speaker-talk-title">Talk title to be announced</p>
+              <p class="content-pending">The talk abstract will be published here when available.</p>
+            </section>
+          </div>
+        </article>
+        <article class="speaker-profile" aria-labelledby="speaker-6-name">
+          <div class="speaker-identity">
+            <a class="portrait-link" href="https://scholar.google.com/citations?user=7R7MSb4AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Reynold Cheng on Google Scholar"><img class="speaker-photo" src="assets/people/reynold-cheng.jpg" alt="Reynold Cheng" loading="lazy" decoding="async"></a>
+            <h3 class="speaker-name" id="speaker-6-name"><a href="https://scholar.google.com/citations?user=7R7MSb4AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Reynold Cheng</a></h3>
+            <p class="speaker-affiliation">The University of Hong Kong<br>Hong Kong</p>
+          </div>
+          <div class="speaker-details">
+            <details class="speaker-detail person-bio speaker-bio" name="speaker-biographies">
+              <summary id="speaker-6-bio"><span class="speaker-bio-label">Biography</span><span class="speaker-bio-action"><span class="bio-when-closed">Read bio</span><span class="bio-when-open">Close bio</span><span class="bio-toggle" aria-hidden="true">+</span></span><span class="sr-only"> of Reynold Cheng</span></summary>
+              <div class="speaker-bio-content">
+                <p>Prof. Reynold Cheng is the Division Head and Professor (AI &amp; Data Science), at the School of Computing and Data Science in the University of Hong Kong (HKU) established in 2024. He is an ACM Distinguished Member and an IEEE Senior Member.</p>
+                <p>He is a Steering Committee Member of the HKU Musketeers Foundation Institute of Data Science. He is an academic advisor to the College of Professional and Continuing Education of HKPU. He was the Head of Computer Science in 2024, and an Associate Dean of Engineering in 2022–24. His research interests are in data science, big graph analytics and uncertain databases.</p>
+                <p>Professor Cheng is named the AI 2000 Most Influential Scholar Honorable Mention in Database in 2023 to 2025. He received the HKU Outstanding Research Student Supervisor Award in 2023. He was listed as the World’s Top 2% Scientists by Stanford University in 2022. He received the SIGMOD Research Highlights Reward 2020, International Exhibition of Inventions Geneva Award (2026), HKICT Awards (2021, 2023), HKU Knowledge Exchange Award (2024), HKU Engineering Knowledge Exchange Award (2024, 2021), HKU Engineering Best Teaching Award (2023, 2024), and HKU Outstanding Young Researcher Award 2011–12. He received the Universitas 21 Fellowship in 2011, and Hong Kong Polytechnic University Computing Performance Awards (2006, 2007). He was a PC co-chair of IEEE ICDE 2021. He is on the editorial board of PVLDB, ACM TSAS, IS, DAPD, and DSEJ.</p>
+              </div>
+            </details>
+            <section class="speaker-detail" aria-labelledby="speaker-6-talk">
+              <h4 id="speaker-6-talk">Talk Introduction</h4>
+              <p class="speaker-talk-title">Talk title to be announced</p>
+              <p class="content-pending">The talk abstract will be published here when available.</p>
+            </section>
+          </div>
+        </article>
+        <article class="speaker-profile" aria-labelledby="speaker-7-name">
+          <div class="speaker-identity">
+            <a class="portrait-link" href="https://scholar.google.com/citations?user=0RdtBlUAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Angela Bonifati on Google Scholar"><img class="speaker-photo" src="assets/people/angela-bonifati.jpg" alt="Angela Bonifati" loading="lazy" decoding="async"></a>
+            <h3 class="speaker-name" id="speaker-7-name"><a href="https://scholar.google.com/citations?user=0RdtBlUAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Angela Bonifati</a></h3>
+            <p class="speaker-affiliation">Lyon 1 University<br>France</p>
+            <p class="speaker-role">Distinguished Professor of Computer Science</p>
+          </div>
+          <div class="speaker-details">
+            <details class="speaker-detail person-bio speaker-bio" name="speaker-biographies">
+              <summary id="speaker-7-bio"><span class="speaker-bio-label">Biography</span><span class="speaker-bio-action"><span class="bio-when-closed">Read bio</span><span class="bio-when-open">Close bio</span><span class="bio-toggle" aria-hidden="true">+</span></span><span class="sr-only"> of Angela Bonifati</span></summary>
+              <div class="speaker-bio-content">
+                <p>Angela Bonifati is a Distinguished Professor of Computer Science at Lyon 1 University and at the CNRS LIRIS research laboratory, where she leads the Database Group. She is also an Adjunct Professor at the University of Waterloo, Canada since 2020, and a Senior Member of the French University Institute (IUF) since 2023.</p>
+                <p>Her current research interests span several aspects of data management, including graph databases, knowledge graphs, and data integration, as well as their applications to data science and artificial intelligence. She has co-authored numerous publications in top venues in the data management field, including five Best Paper Awards, two books, and an invited paper in ACM SIGMOD Record (2018).</p>
+                <p>She is an ACM Fellow and the recipient of a European Research Council Advanced Grant (2024). Her work has been recognized with the VLDB Women in DB Research Award (2025), the IEEE TCDE Impact Award (2023), and an ACM SIGMOD Research Highlights Award (2023).</p>
+                <p>She is the General Chair of VLDB 2026 and has previously served as Program Chair of IEEE ICDE 2025, ACM SIGMOD 2022, and EDBT 2020. She is currently an Associate Editor for the Proceedings of the VLDB (Volume 19), IEEE TKDE, and ACM TODS. She is also the President of ACM SIGMOD (2025–2029), a member of the IEEE Technical Committee on Data Engineering (2024–2029), and a member of the PVLDB Board of Trustees (2024–2029).</p>
+              </div>
+            </details>
+            <section class="speaker-detail" aria-labelledby="speaker-7-talk">
+              <h4 id="speaker-7-talk">Talk Introduction</h4>
+              <p class="speaker-talk-title">Talk title to be announced</p>
+              <p class="content-pending">The talk abstract will be published here when available.</p>
+            </section>
+          </div>
+        </article>
       </div>
     </section>
     <section class="section" id="organizers" aria-labelledby="organizers-heading">
@@ -217,7 +306,7 @@
               <a class="portrait-link" href="https://scholar.google.com/citations?user=U6-ouN0AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Chen Jason Zhang on Google Scholar"><img class="person-photo" src="assets/people/chen-jason-zhang.jpg" alt="Chen Jason Zhang" loading="lazy" decoding="async"></a>
               <div class="person-identity">
                 <h3 id="organizer-1-name"><a href="https://scholar.google.com/citations?user=U6-ouN0AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Chen Jason Zhang</a></h3>
-                <p>PolyU</p>
+                <p>The Hong Kong Polytechnic University</p>
               </div>
             </div>
             <details class="person-bio">
@@ -233,7 +322,7 @@
               <a class="portrait-link" href="https://scholar.google.com/citations?user=r0nnyGYAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Jessie Li on Google Scholar"><img class="person-photo" src="assets/people/jessie-li.jpg" alt="Jessie Li" loading="lazy" decoding="async"></a>
               <div class="person-identity">
                 <h3 id="organizer-2-name"><a href="https://scholar.google.com/citations?user=r0nnyGYAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Jessie Li</a></h3>
-                <p>PolyU</p>
+                <p>The Hong Kong Polytechnic University</p>
               </div>
             </div>
             <details class="person-bio">
@@ -247,7 +336,7 @@
               <a class="portrait-link" href="https://scholar.google.com/citations?user=df8FxPAAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Li Sun on Google Scholar"><img class="person-photo" src="assets/people/li-sun.jpg" alt="Li Sun" loading="lazy" decoding="async"></a>
               <div class="person-identity">
                 <h3 id="organizer-3-name"><a href="https://scholar.google.com/citations?user=df8FxPAAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Li Sun</a></h3>
-                <p>BUPT</p>
+                <p>Beijing University of Posts and Telecommunications</p>
               </div>
             </div>
             <details class="person-bio">
@@ -261,7 +350,7 @@
               <a class="portrait-link" href="https://scholar.google.com/citations?user=7O_KB40AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Yutong Ye on Google Scholar"><img class="person-photo" src="assets/people/yutong-ye-homepage.png" alt="Yutong Ye" loading="lazy" decoding="async"></a>
               <div class="person-identity">
                 <h3 id="organizer-4-name"><a href="https://scholar.google.com/citations?user=7O_KB40AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Yutong Ye</a></h3>
-                <p>ZSTU</p>
+                <p>Zhejiang Sci-Tech University</p>
               </div>
             </div>
             <details class="person-bio">
@@ -304,7 +393,7 @@
               <a class="portrait-link" href="https://scholar.google.com/citations?user=lNQmMTMAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Ruoming Jin on Google Scholar"><img class="person-photo" src="assets/people/ruoming-jin-homepage.jpg" alt="Ruoming Jin" loading="lazy" decoding="async"></a>
               <div class="person-identity">
                 <h3 id="organizer-7-name"><a href="https://scholar.google.com/citations?user=lNQmMTMAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Ruoming Jin</a></h3>
-                <p>KSU</p>
+                <p>Kent State University</p>
               </div>
             </div>
             <details class="person-bio">
@@ -334,7 +423,7 @@
               <a class="portrait-link" href="https://scholar.google.com/citations?user=D0lL1r0AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Philip S. Yu on Google Scholar"><img class="person-photo" src="assets/people/philip-yu.jpg" alt="Philip S. Yu" loading="lazy" decoding="async"></a>
               <div class="person-identity">
                 <h3 id="organizer-9-name"><a href="https://scholar.google.com/citations?user=D0lL1r0AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Philip S. Yu</a></h3>
-                <p>UIC</p>
+                <p>University of Illinois Chicago</p>
               </div>
             </div>
             <details class="person-bio">
@@ -349,8 +438,8 @@
       <div class="container">
         <h2 id="pc-chairs-heading">Program Committee Chairs</h2>
         <div class="pc-chair-grid">
-          <article class="pc-chair"><div class="pc-chair-heading"><a class="portrait-link" href="https://scholar.google.com/citations?user=eGANq1YAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Mengyao Lyu on Google Scholar"><img class="person-photo pc-photo mengyao-photo" src="assets/people/mengyao-lyu-homepage.jpg" alt="Mengyao Lyu" loading="lazy" decoding="async"></a><div><h3><a href="https://scholar.google.com/citations?user=eGANq1YAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Mengyao Lyu</a></h3><p>NTU</p></div></div></article>
-          <article class="pc-chair"><div class="pc-chair-heading"><a class="portrait-link" href="https://scholar.google.com/citations?user=6TuPwzMAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Zhenhong Zhou on Google Scholar"><img class="person-photo pc-photo" src="assets/people/zhenhong-zhou.jpg" alt="Zhenhong Zhou — Google Scholar avatar" loading="lazy" decoding="async"></a><div><h3><a href="https://scholar.google.com/citations?user=6TuPwzMAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Zhenhong Zhou</a></h3><p>NTU</p></div></div></article>
+          <article class="pc-chair"><div class="pc-chair-heading"><a class="portrait-link" href="https://scholar.google.com/citations?user=eGANq1YAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Mengyao Lyu on Google Scholar"><img class="person-photo pc-photo mengyao-photo" src="assets/people/mengyao-lyu-homepage.jpg" alt="Mengyao Lyu" loading="lazy" decoding="async"></a><div><h3><a href="https://scholar.google.com/citations?user=eGANq1YAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Mengyao Lyu</a></h3><p>Nanyang Technological University</p></div></div></article>
+          <article class="pc-chair"><div class="pc-chair-heading"><a class="portrait-link" href="https://scholar.google.com/citations?user=6TuPwzMAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Zhenhong Zhou on Google Scholar"><img class="person-photo pc-photo" src="assets/people/zhenhong-zhou.jpg" alt="Zhenhong Zhou — Google Scholar avatar" loading="lazy" decoding="async"></a><div><h3><a href="https://scholar.google.com/citations?user=6TuPwzMAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Zhenhong Zhou</a></h3><p>Nanyang Technological University</p></div></div></article>
           <article class="pc-chair"><div class="pc-chair-heading"><a class="portrait-link" href="https://scholar.google.com/citations?user=dfjWd2oAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Zhiwei Liu on Google Scholar"><img class="person-photo pc-photo" src="assets/people/zhiwei-liu.jpg" alt="Zhiwei Liu — Google Scholar avatar" loading="lazy" decoding="async"></a><div><h3><a href="https://scholar.google.com/citations?user=dfjWd2oAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Zhiwei Liu</a></h3><p>Recursive Inc.</p></div></div></article>
         </div>
       </div>
@@ -358,8 +447,14 @@
   </main>
   <footer class="site-footer">
     <div class="container">
-      <p>Management of Agentic Systems · Proposed WSDM 2027 Workshop</p>
-      <p><a href="#top">Back to top ↑</a> <span aria-hidden="true">·</span> <a href="https://wsdm-conference.org/2027/" target="_blank" rel="noopener noreferrer">WSDM 2027</a></p>
+      <div class="footer-copy">
+        <p class="footer-title">Management of Agentic Systems</p>
+        <p>WSDM 2027 Workshop · 19 February 2027 · Hong Kong</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://wsdm-conference.org/2027/" target="_blank" rel="noopener noreferrer">WSDM 2027 <span aria-hidden="true">↗</span></a>
+        <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
     </div>
   </footer>
 </body>
