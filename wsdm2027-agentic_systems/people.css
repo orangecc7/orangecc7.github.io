@@ -171,12 +171,12 @@
 .lineup-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; margin-bottom: 18px; }
 .speaker-showcase .lineup-heading h2 { margin: 0; padding: 0; border: 0; font-size: 25px; letter-spacing: -.6px; }
 .lineup-caption { margin: 0; color: var(--people-muted); font: 500 13px/1.6 var(--heading); }
-.speaker-showcase .speaker-lineup { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 16px; margin: 0; padding: 0; list-style: none; }
+.speaker-showcase .speaker-lineup { display: grid; grid-template-columns: max-content repeat(6, minmax(0, 1fr)); gap: 16px; margin: 0; padding: 0; list-style: none; }
 .speaker-showcase .lineup-person { min-width: 0; margin: 0; padding: 0; text-align: center; }
 .lineup-portrait { display: block; width: 112px; margin: 0 auto 12px; border-radius: 50%; }
 .lineup-photo { display: block; width: 112px; height: 112px; object-fit: cover; object-position: center 30%; border-radius: 50%; border: 4px solid #fff; outline: 1px solid #e4e9ea; }
 .lineup-portrait:hover .lineup-photo { outline-color: var(--accent); }
-.speaker-showcase .lineup-name { min-height: 42px; margin: 0 0 4px; font: 600 14px/1.45 var(--heading); letter-spacing: -.25px; overflow-wrap: anywhere; }
+.speaker-showcase .lineup-name { margin: 0 0 4px; font: 600 14px/1.45 var(--heading); letter-spacing: -.25px; white-space: nowrap; }
 .lineup-name a { color: var(--blue); }
 .lineup-affiliation { margin: 0; color: var(--people-muted); font: 500 12px/1.6 var(--heading); }
 .lineup-affiliation abbr { text-decoration: none; cursor: help; }
@@ -202,9 +202,9 @@
   .lineup-portrait, .lineup-photo { width: 100px; }
   .lineup-photo { height: 100px; }
 }
-@media (max-width: 900px) {
-  .speaker-showcase .speaker-lineup { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 145px; gap: 20px; overflow-x: auto; padding: 2px 2px 12px; scroll-snap-type: x proximity; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
-  .speaker-showcase .lineup-person { scroll-snap-align: start; }
+@media (max-width: 1100px) {
+  .speaker-showcase .speaker-lineup { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: max-content; gap: 20px; overflow-x: auto; padding: 2px 2px 12px; scroll-snap-type: x proximity; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+  .speaker-showcase .lineup-person { min-width: 145px; scroll-snap-align: start; }
   .lineup-scroll-hint { display: block; margin: 7px 0 0; color: var(--people-muted); font: 500 12px/1.6 var(--heading); }
 }
 @media (max-width: 767px) {
