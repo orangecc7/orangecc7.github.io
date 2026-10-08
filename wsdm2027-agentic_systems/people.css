@@ -145,7 +145,7 @@
 /* Scholar and homepage portraits share the existing people layout. */
 .portrait-link { display: block; width: fit-content; border-radius: 3px; }
 /* Crop the circular source portrait inside its existing rectangular frame. */
-.portrait-square { width: 64px; height: 76px; overflow: hidden; border-radius: 0; }
+.portrait-square { width: 64px; height: 76px; overflow: hidden; border-radius: 3px; }
 .portrait-square .person-photo { border-radius: 0; object-position: center; transform: scale(1.42); }
 .speaker-identity .portrait-link { width: min(144px, 100%); margin-inline: auto; }
 .speaker-photo { aspect-ratio: 24 / 25; }
