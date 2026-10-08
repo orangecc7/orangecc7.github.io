@@ -245,8 +245,8 @@ strong { font-weight: 700; }
 .lineup-home .conference-link { margin-top: 12px; font-size: 12px; }
 .lineup-home #intro { padding: 20px 0 22px; }
 .overview-expand { display: none; }
-.overview-layout { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 36px; align-items: start; }
-.lineup-home #intro h2 { margin: 4px 0 0; font-size: 24px; }
+.overview-layout { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 30px; align-items: start; }
+.lineup-home #intro h2 { margin: 4px 0 0; padding: 0; border: 0; font-size: 24px; }
 .lineup-home #intro .abstract p { margin: 0; font-size: 16px; line-height: 1.65; }
 .lineup-home #intro .abstract p + p { margin-top: 8px; }
 @media (min-width: 1024px) and (max-height: 800px) {

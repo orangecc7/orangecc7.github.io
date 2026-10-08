@@ -1,4 +1,35 @@
 (function () {
+  const biographyButtons = Array.from(document.querySelectorAll('.lineup-bio-toggle'));
+  const biographyPanels = Array.from(document.querySelectorAll('.speaker-bio-panel'));
+  function synchronizeBiographies() {
+    biographyButtons.forEach(function (button) {
+      const expanded = document.getElementById(button.getAttribute('aria-controls')).open;
+      button.setAttribute('aria-expanded', String(expanded));
+      button.innerHTML = expanded ? 'Close bio <span aria-hidden="true">−</span>' : 'Biography <span aria-hidden="true">+</span>';
+    });
+  }
+  biographyButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      const panel = document.getElementById(button.getAttribute('aria-controls'));
+      const shouldOpen = !panel.open;
+      biographyPanels.forEach(function (other) { other.open = false; });
+      panel.open = shouldOpen;
+      synchronizeBiographies();
+      if (shouldOpen) panel.scrollIntoView({ block: 'start', behavior: 'instant' });
+    });
+  });
+  biographyPanels.forEach(function (panel) {
+    panel.addEventListener('toggle', synchronizeBiographies);
+    panel.querySelector('summary').addEventListener('click', function (event) {
+      if (!panel.open) return;
+      event.preventDefault();
+      panel.open = false;
+      synchronizeBiographies();
+      const trigger = biographyButtons.find(function (button) { return button.getAttribute('aria-controls') === panel.id; });
+      if (trigger) trigger.focus();
+    });
+  });
+  document.body.classList.add('people-ready');
   const overviewButton = document.querySelector('.overview-expand');
   if (overviewButton) overviewButton.addEventListener('click', function () {
     const expanded = overviewButton.getAttribute('aria-expanded') !== 'true';
