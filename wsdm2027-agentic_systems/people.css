@@ -96,7 +96,7 @@
 .organizer.person-card .person-bio .content-pending { color: var(--people-muted); }
 
 /* PC chairs are presented as a separate group even when roles overlap. */
-.pc-section { border-top: 1px solid var(--line); }
+.pc-section { border: 1px solid var(--line); background: var(--people-surface); }
 .pc-chair-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
