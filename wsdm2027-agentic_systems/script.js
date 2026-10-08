@@ -15,7 +15,6 @@
       biographyPanels.forEach(function (other) { other.open = false; });
       panel.open = shouldOpen;
       synchronizeBiographies();
-      if (shouldOpen) panel.scrollIntoView({ block: 'start', behavior: 'instant' });
     });
   });
   biographyPanels.forEach(function (panel) {
@@ -26,7 +25,7 @@
       panel.open = false;
       synchronizeBiographies();
       const trigger = biographyButtons.find(function (button) { return button.getAttribute('aria-controls') === panel.id; });
-      if (trigger) trigger.focus();
+      if (trigger) trigger.focus({ preventScroll: true });
     });
   });
   document.body.classList.add('people-ready');
@@ -57,18 +56,24 @@
       closeMenu(); button.focus();
     }
   });
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        const target = entry.target.id === 'speakers' ? 'speaker-lineup' : entry.target.id;
-        if (!links.some(link => link.getAttribute('href') === '#' + target)) return;
-        links.forEach(function (link) {
-          if (link.getAttribute('href') === '#' + target) link.setAttribute('aria-current', 'true');
-          else link.removeAttribute('aria-current');
-        });
-      });
-    }, {rootMargin: '-75px 0px -65% 0px'});
-    document.querySelectorAll('.section[id]').forEach(section => observer.observe(section));
+  const sections = links.map(function (link) { return document.querySelector(link.getAttribute('href')); }).filter(Boolean);
+  let updatePending = false;
+  function updateCurrentSection() {
+    updatePending = false;
+    const marker = document.querySelector('.site-nav').getBoundingClientRect().height + 100;
+    let active = sections[0];
+    sections.forEach(function (section) { if (section.getBoundingClientRect().top <= marker) active = section; });
+    links.forEach(function (link) {
+      if (active && link.getAttribute('href') === '#' + active.id) link.setAttribute('aria-current', 'true');
+      else link.removeAttribute('aria-current');
+    });
   }
+  function scheduleNavigationUpdate() {
+    if (updatePending) return;
+    updatePending = true;
+    requestAnimationFrame(updateCurrentSection);
+  }
+  window.addEventListener('scroll', scheduleNavigationUpdate, { passive: true });
+  window.addEventListener('resize', scheduleNavigationUpdate);
+  updateCurrentSection();
 }());

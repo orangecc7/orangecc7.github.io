@@ -228,60 +228,66 @@ strong { font-weight: 700; }
   .nav-links a { transition: none; }
 }
 
-/* A compact opening sequence: title, overview, then the invited-speaker team. */
-.lineup-home .panorama { height: 76px; margin-top: 12px; }
-.lineup-home .workshop-title { padding: 20px 0 22px; }
-.lineup-home .title-layout { grid-template-columns: minmax(0, 1fr) 220px; gap: 36px; }
-.lineup-home .workshop-subtitle { margin-bottom: 9px; font-size: 12px; }
-.lineup-home .workshop-title h1 { font-size: 32px; line-height: 1.22; }
-.lineup-home .workshop-title h1 span { margin-top: 8px; font-size: 22px; line-height: 1.35; }
-.lineup-home .hero-actions { margin-top: 16px; }
+/* A panoramic title panel leads into one continuous overview and speaker area. */
+.lineup-home .workshop-hero { position: relative; isolation: isolate; overflow: hidden; width: min(calc(100% - 48px), 1260px); min-height: 230px; margin: 18px auto 22px; padding: 26px 40px 30px; border-radius: 7px; background: #183446; }
+.hero-panorama { position: absolute; inset: 0; z-index: -2; display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 45%; }
+.workshop-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(16,37,52,.96), rgba(16,37,52,.87) 49%, rgba(16,37,52,.54)); }
+.lineup-home .workshop-hero .title-layout { width: 100%; grid-template-columns: minmax(0, 1fr) 210px; gap: 38px; }
+.lineup-home .workshop-hero .workshop-subtitle { margin-bottom: 10px; color: #ecc6aa; font-size: 12px; letter-spacing: 1.8px; }
+.lineup-home .workshop-hero h1 { color: #fff; font-size: 34px; line-height: 1.22; letter-spacing: -.9px; }
+.lineup-home .workshop-hero h1 span { margin-top: 9px; color: #edf1f3; font-size: 22px; line-height: 1.35; letter-spacing: -.35px; }
+.lineup-home .hero-actions { margin-top: 18px; }
 .lineup-home .button { min-height: 38px; padding-block: 7px; font-size: 13px; }
-.lineup-home .event-conference { margin-bottom: 12px; font-size: 17px; }
-.lineup-home .event-facts > div { display: grid; grid-template-columns: 59px minmax(0, 1fr); gap: 5px; align-items: baseline; }
-.lineup-home .event-facts > div + div { margin-top: 6px; }
-.lineup-home .event-facts dt { margin: 0; font-size: 10px; letter-spacing: .8px; }
-.lineup-home .event-facts dd { font-size: 13px; }
-.lineup-home .conference-link { margin-top: 12px; font-size: 12px; }
-.lineup-home #intro { padding: 20px 0 22px; }
-.overview-expand { display: none; }
-.overview-layout { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 30px; align-items: start; }
-.lineup-home #intro h2 { margin: 4px 0 0; padding: 0; border: 0; font-size: 24px; }
+.workshop-hero .button-primary { border-color: #fff; color: var(--blue); background: #fff; }
+.workshop-hero .button-primary:hover { background: #f2e8df; border-color: #f2e8df; }
+.workshop-hero .button-secondary { color: #fff; background: transparent; border-color: rgba(255,255,255,.45); }
+.workshop-hero .button-secondary:hover { background: rgba(255,255,255,.12); }
+.workshop-hero .title-details { border-color: rgba(255,255,255,.28); padding-left: 24px; }
+.lineup-home .workshop-hero .event-conference { margin-bottom: 15px; color: #ecc6aa; font-size: 17px; }
+.lineup-home .workshop-hero .event-facts > div { display: grid; grid-template-columns: 59px minmax(0, 1fr); gap: 5px; align-items: baseline; }
+.lineup-home .workshop-hero .event-facts > div + div { margin-top: 10px; }
+.workshop-hero .event-facts dt { margin: 0; color: #c6d5df; font-size: 10px; letter-spacing: .8px; }
+.workshop-hero .event-facts dd { color: #fff; font-size: 13px; }
+.workshop-hero .conference-link { margin-top: 16px; color: #edf1f3; font-size: 12px; }
+.workshop-hero .image-credit { z-index: 1; font-size: 9px; }
+.opening-content { width: min(calc(100% - 60px), var(--width)); margin: 0 auto 32px; padding: 22px 28px 24px; border: 1px solid var(--line); border-radius: 7px; background: #fff; }
+.opening-content > .section { padding: 0; border: 0; }
+.opening-content .container { width: 100%; }
+.overview-layout { display: block; }
+.lineup-home #intro h2 { margin: 0 0 10px; padding: 0; border: 0; font-size: 25px; letter-spacing: -.6px; }
 .lineup-home #intro .abstract p { margin: 0; font-size: 16px; line-height: 1.65; }
-.lineup-home #intro .abstract p + p { margin-top: 8px; }
+.overview-expand { display: none; }
 @media (min-width: 1024px) and (max-height: 800px) {
-  .lineup-home .panorama { height: 64px; margin-top: 10px; }
-  .lineup-home .workshop-title { padding: 16px 0 18px; }
-  .lineup-home #intro { padding: 16px 0 18px; }
+  .lineup-home .workshop-hero { margin-top: 14px; margin-bottom: 18px; min-height: 208px; padding-block: 20px 22px; }
+  .opening-content { padding-top: 18px; padding-bottom: 20px; }
 }
 @media (max-width: 1100px) {
-  .lineup-home .title-layout { grid-template-columns: minmax(0, 1fr) 200px; gap: 24px; }
-  .lineup-home .workshop-title h1 { font-size: 29px; }
-  .lineup-home .workshop-title h1 span { font-size: 21px; }
-  .overview-layout { grid-template-columns: 140px minmax(0, 1fr); gap: 24px; }
+  .lineup-home .workshop-hero { padding-inline: 28px; }
+  .lineup-home .workshop-hero .title-layout { grid-template-columns: minmax(0, 1fr) 185px; gap: 24px; }
+  .lineup-home .workshop-hero h1 { font-size: 29px; }
+  .lineup-home .workshop-hero h1 span { font-size: 21px; }
 }
 @media (max-width: 767px) {
-  .lineup-home .panorama { height: 64px; margin-top: 10px; }
-  .lineup-home .workshop-title { padding: 20px 0; }
-  .lineup-home .title-layout { grid-template-columns: 1fr; gap: 16px; }
-  .lineup-home .workshop-title h1 { font-size: 26px; line-height: 1.25; }
-  .lineup-home .workshop-title h1 span { font-size: 20px; line-height: 1.4; }
-  .lineup-home .hero-actions { margin-top: 14px; }
-  .lineup-home .title-details { padding-top: 12px; }
-  .lineup-home .title-details .event-conference,
-  .lineup-home .title-details .conference-link { display: none; }
-  .lineup-home .event-facts { display: flex; justify-content: space-between; gap: 16px; }
-  .lineup-home .event-facts > div { display: block; }
-  .lineup-home .event-facts > div + div { margin-top: 0; }
-  .lineup-home .event-facts dt { font-size: 10px; margin-bottom: 2px; }
-  .lineup-home .event-facts dd { font-size: 13px; }
-  .lineup-home #intro { padding: 20px 0; }
-  .overview-layout { position: relative; grid-template-columns: 1fr; gap: 14px; }
-  .lineup-home #intro h2 { margin: 0; font-size: 22px; }
-  .overview-copy { min-width: 0; }
+  .lineup-home .workshop-hero { width: calc(100% - 24px); margin: 12px auto 16px; padding: 22px 20px 28px; }
+  .hero-panorama { object-position: 61% center; }
+  .workshop-hero::before { background: rgba(16,37,52,.83); }
+  .lineup-home .workshop-hero .title-layout { grid-template-columns: 1fr; gap: 16px; }
+  .lineup-home .workshop-hero h1 { font-size: 25px; line-height: 1.25; }
+  .lineup-home .workshop-hero h1 span { font-size: 18px; line-height: 1.4; }
+  .lineup-home .hero-actions { margin-top: 16px; gap: 8px; }
+  .lineup-home .button { padding-inline: 12px; gap: 10px; font-size: 12px; }
+  .lineup-home .workshop-hero .title-details { padding-top: 12px; padding-left: 0; border-top: 1px solid rgba(255,255,255,.28); border-left: 0; }
+  .workshop-hero .title-details .event-conference,
+  .workshop-hero .title-details .conference-link { display: none; }
+  .lineup-home .workshop-hero .event-facts { display: flex; justify-content: space-between; gap: 12px; }
+  .lineup-home .workshop-hero .event-facts > div { display: block; }
+  .lineup-home .workshop-hero .event-facts > div + div { margin-top: 0; }
+  .workshop-hero .event-facts dt { margin-bottom: 2px; }
+  .workshop-hero .image-credit { font-size: 8px; }
+  .opening-content { width: calc(100% - 24px); padding: 20px 16px 22px; margin-bottom: 24px; }
+  .overview-layout { position: relative; }
+  .lineup-home #intro h2 { font-size: 22px; margin-bottom: 14px; }
   .overview-copy:not(.is-expanded) .abstract p { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-  .overview-expand { position: absolute; top: 0; right: 0; display: inline-flex; gap: 9px; align-items: center; margin-top: 0; padding: 3px 0; border: 0; background: transparent; color: var(--accent); font: 600 13px/1.6 var(--heading); cursor: pointer; }
+  .overview-expand { position: absolute; top: 0; right: 0; display: inline-flex; align-items: center; gap: 8px; padding: 3px 0; border: 0; background: transparent; color: var(--accent); font: 600 12px/1.6 var(--heading); cursor: pointer; }
   .overview-expand span { font-size: 18px; line-height: 1; }
-  .overview-expand:hover { text-decoration: underline; text-underline-offset: 3px; }
-
 }
