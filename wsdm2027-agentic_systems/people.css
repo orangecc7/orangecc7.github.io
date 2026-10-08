@@ -248,9 +248,9 @@
 /* Roles sit below the full affiliation without competing with speaker names. */
 .speaker-role { margin: 8px 0 0; color: var(--people-muted); font: 500 13px/1.6 var(--heading); }
 
-/* A full team portrait strip introduces the workshop before its overview. */
-#speaker-lineup { padding: 26px 0 30px; background: var(--people-surface); border-block: 1px solid var(--line); }
-.lineup-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 22px; }
+/* The full invited-speaker team follows the compact workshop overview. */
+#speaker-lineup { padding: 22px 0 24px; background: var(--people-surface); border-block: 1px solid var(--line); }
+.lineup-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 18px; }
 .speaker-showcase .lineup-heading h2 { display: flex; align-items: center; gap: 15px; margin: 0; font-size: 25px; }
 .lineup-count { color: var(--accent); font: 500 15px/1 var(--heading); letter-spacing: .5px; }
 .lineup-bios-link { color: var(--blue); font: 600 13px/1.6 var(--heading); white-space: nowrap; }

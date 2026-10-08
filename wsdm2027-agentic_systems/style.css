@@ -228,37 +228,60 @@ strong { font-weight: 700; }
   .nav-links a { transition: none; }
 }
 
-/* Make room for the complete invited-speaker lineup on the opening screen. */
-.lineup-home .panorama { height: 112px; margin-top: 16px; }
-.lineup-home .workshop-title { padding: 26px 0 28px; }
-.lineup-home .workshop-subtitle { margin-bottom: 12px; font-size: 12px; }
-.lineup-home .workshop-title h1 { font-size: 34px; line-height: 1.22; }
-.lineup-home .workshop-title h1 span { margin-top: 10px; font-size: 24px; line-height: 1.35; }
-.lineup-home .hero-actions { margin-top: 18px; }
-.lineup-home .button { min-height: 40px; padding-block: 8px; font-size: 13px; }
+/* A compact opening sequence: title, overview, then the invited-speaker team. */
+.lineup-home .panorama { height: 76px; margin-top: 12px; }
+.lineup-home .workshop-title { padding: 20px 0 22px; }
+.lineup-home .title-layout { grid-template-columns: minmax(0, 1fr) 220px; gap: 36px; }
+.lineup-home .workshop-subtitle { margin-bottom: 9px; font-size: 12px; }
+.lineup-home .workshop-title h1 { font-size: 32px; line-height: 1.22; }
+.lineup-home .workshop-title h1 span { margin-top: 8px; font-size: 22px; line-height: 1.35; }
+.lineup-home .hero-actions { margin-top: 16px; }
+.lineup-home .button { min-height: 38px; padding-block: 7px; font-size: 13px; }
 .lineup-home .event-conference { margin-bottom: 12px; font-size: 17px; }
-.lineup-home .event-facts > div + div { margin-top: 10px; }
-.lineup-home .conference-link { margin-top: 14px; }
+.lineup-home .event-facts > div { display: grid; grid-template-columns: 59px minmax(0, 1fr); gap: 5px; align-items: baseline; }
+.lineup-home .event-facts > div + div { margin-top: 6px; }
+.lineup-home .event-facts dt { margin: 0; font-size: 10px; letter-spacing: .8px; }
+.lineup-home .event-facts dd { font-size: 13px; }
+.lineup-home .conference-link { margin-top: 12px; font-size: 12px; }
+.lineup-home #intro { padding: 20px 0 22px; }
+.overview-expand { display: none; }
+.overview-layout { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 36px; align-items: start; }
+.lineup-home #intro h2 { margin: 4px 0 0; font-size: 24px; }
+.lineup-home #intro .abstract p { margin: 0; font-size: 16px; line-height: 1.65; }
+.lineup-home #intro .abstract p + p { margin-top: 8px; }
 @media (min-width: 1024px) and (max-height: 800px) {
-  .lineup-home .panorama { height: 88px; margin-top: 12px; }
-  .lineup-home .workshop-title { padding-top: 22px; padding-bottom: 24px; }
+  .lineup-home .panorama { height: 64px; margin-top: 10px; }
+  .lineup-home .workshop-title { padding: 16px 0 18px; }
+  .lineup-home #intro { padding: 16px 0 18px; }
 }
-@media (max-width: 1000px) {
-  .lineup-home .workshop-title h1 { font-size: 31px; }
-  .lineup-home .workshop-title h1 span { font-size: 23px; }
+@media (max-width: 1100px) {
+  .lineup-home .title-layout { grid-template-columns: minmax(0, 1fr) 200px; gap: 24px; }
+  .lineup-home .workshop-title h1 { font-size: 29px; }
+  .lineup-home .workshop-title h1 span { font-size: 21px; }
+  .overview-layout { grid-template-columns: 140px minmax(0, 1fr); gap: 24px; }
 }
 @media (max-width: 767px) {
-  .lineup-home .panorama { height: 80px; margin-top: 12px; }
-  .lineup-home .workshop-title { padding: 24px 0; }
-  .lineup-home .title-layout { gap: 16px; }
+  .lineup-home .panorama { height: 64px; margin-top: 10px; }
+  .lineup-home .workshop-title { padding: 20px 0; }
+  .lineup-home .title-layout { grid-template-columns: 1fr; gap: 16px; }
   .lineup-home .workshop-title h1 { font-size: 26px; line-height: 1.25; }
   .lineup-home .workshop-title h1 span { font-size: 20px; line-height: 1.4; }
-  .lineup-home .hero-actions { margin-top: 16px; }
-  .lineup-home .title-details { padding-top: 14px; }
+  .lineup-home .hero-actions { margin-top: 14px; }
+  .lineup-home .title-details { padding-top: 12px; }
   .lineup-home .title-details .event-conference,
   .lineup-home .title-details .conference-link { display: none; }
-  .lineup-home .event-facts { gap: 16px; }
+  .lineup-home .event-facts { display: flex; justify-content: space-between; gap: 16px; }
+  .lineup-home .event-facts > div { display: block; }
   .lineup-home .event-facts > div + div { margin-top: 0; }
   .lineup-home .event-facts dt { font-size: 10px; margin-bottom: 2px; }
   .lineup-home .event-facts dd { font-size: 13px; }
+  .lineup-home #intro { padding: 20px 0; }
+  .overview-layout { position: relative; grid-template-columns: 1fr; gap: 14px; }
+  .lineup-home #intro h2 { margin: 0; font-size: 22px; }
+  .overview-copy { min-width: 0; }
+  .overview-copy:not(.is-expanded) .abstract p { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .overview-expand { position: absolute; top: 0; right: 0; display: inline-flex; gap: 9px; align-items: center; margin-top: 0; padding: 3px 0; border: 0; background: transparent; color: var(--accent); font: 600 13px/1.6 var(--heading); cursor: pointer; }
+  .overview-expand span { font-size: 18px; line-height: 1; }
+  .overview-expand:hover { text-decoration: underline; text-underline-offset: 3px; }
+
 }

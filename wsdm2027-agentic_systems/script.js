@@ -1,4 +1,11 @@
 (function () {
+  const overviewButton = document.querySelector('.overview-expand');
+  if (overviewButton) overviewButton.addEventListener('click', function () {
+    const expanded = overviewButton.getAttribute('aria-expanded') !== 'true';
+    overviewButton.setAttribute('aria-expanded', String(expanded));
+    overviewButton.closest('.overview-copy').classList.toggle('is-expanded', expanded);
+    overviewButton.innerHTML = expanded ? 'Close overview <span aria-hidden="true">−</span>' : 'Read overview <span aria-hidden="true">+</span>';
+  });
   const button = document.querySelector('.menu-toggle');
   const menu = document.querySelector('.nav-links');
   const links = Array.from(menu.querySelectorAll('a[href^="#"]'));
