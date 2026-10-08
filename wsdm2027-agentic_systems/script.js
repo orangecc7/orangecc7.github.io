@@ -23,8 +23,10 @@
     const observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
+        const target = entry.target.id === 'speakers' ? 'speaker-lineup' : entry.target.id;
+        if (!links.some(link => link.getAttribute('href') === '#' + target)) return;
         links.forEach(function (link) {
-          if (link.getAttribute('href') === '#' + entry.target.id) link.setAttribute('aria-current', 'true');
+          if (link.getAttribute('href') === '#' + target) link.setAttribute('aria-current', 'true');
           else link.removeAttribute('aria-current');
         });
       });

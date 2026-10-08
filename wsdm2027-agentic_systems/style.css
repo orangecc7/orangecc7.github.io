@@ -227,3 +227,38 @@ strong { font-weight: 700; }
   html { scroll-behavior: auto; }
   .nav-links a { transition: none; }
 }
+
+/* Make room for the complete invited-speaker lineup on the opening screen. */
+.lineup-home .panorama { height: 112px; margin-top: 16px; }
+.lineup-home .workshop-title { padding: 26px 0 28px; }
+.lineup-home .workshop-subtitle { margin-bottom: 12px; font-size: 12px; }
+.lineup-home .workshop-title h1 { font-size: 34px; line-height: 1.22; }
+.lineup-home .workshop-title h1 span { margin-top: 10px; font-size: 24px; line-height: 1.35; }
+.lineup-home .hero-actions { margin-top: 18px; }
+.lineup-home .button { min-height: 40px; padding-block: 8px; font-size: 13px; }
+.lineup-home .event-conference { margin-bottom: 12px; font-size: 17px; }
+.lineup-home .event-facts > div + div { margin-top: 10px; }
+.lineup-home .conference-link { margin-top: 14px; }
+@media (min-width: 1024px) and (max-height: 800px) {
+  .lineup-home .panorama { height: 88px; margin-top: 12px; }
+  .lineup-home .workshop-title { padding-top: 22px; padding-bottom: 24px; }
+}
+@media (max-width: 1000px) {
+  .lineup-home .workshop-title h1 { font-size: 31px; }
+  .lineup-home .workshop-title h1 span { font-size: 23px; }
+}
+@media (max-width: 767px) {
+  .lineup-home .panorama { height: 80px; margin-top: 12px; }
+  .lineup-home .workshop-title { padding: 24px 0; }
+  .lineup-home .title-layout { gap: 16px; }
+  .lineup-home .workshop-title h1 { font-size: 26px; line-height: 1.25; }
+  .lineup-home .workshop-title h1 span { font-size: 20px; line-height: 1.4; }
+  .lineup-home .hero-actions { margin-top: 16px; }
+  .lineup-home .title-details { padding-top: 14px; }
+  .lineup-home .title-details .event-conference,
+  .lineup-home .title-details .conference-link { display: none; }
+  .lineup-home .event-facts { gap: 16px; }
+  .lineup-home .event-facts > div + div { margin-top: 0; }
+  .lineup-home .event-facts dt { font-size: 10px; margin-bottom: 2px; }
+  .lineup-home .event-facts dd { font-size: 13px; }
+}
