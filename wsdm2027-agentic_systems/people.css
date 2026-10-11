@@ -222,3 +222,15 @@
   .bio-panel-name { font-size: 19px; }
   .bio-panel-close { font-size: 0; }
 }
+
+/* Biographies follow the selected row on compact screens. */
+.speaker-showcase .lineup-inline-biography { grid-column: 1 / -1; min-width: 0; margin: 0; padding: 0; list-style: none; text-align: left; }
+.lineup-inline-biography .speaker-bio-panel { margin-top: 0; background: #fff; }
+.lineup-person.has-open-bio .lineup-photo { outline: 2px solid var(--accent); }
+.lineup-person.has-open-bio .lineup-bio-toggle { color: var(--accent); }
+@media (max-width: 1100px) {
+  .lineup-inline-biography .speaker-bio-panel { scroll-margin-top: 92px; }
+  .lineup-inline-biography .speaker-bio-panel summary { padding-block: 16px; }
+  .lineup-inline-biography .speaker-bio-content { padding-top: 14px; }
+  .lineup-inline-biography .speaker-bio-content p { font-size: 15px; line-height: 1.75; }
+}
