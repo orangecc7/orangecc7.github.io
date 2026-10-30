@@ -87,7 +87,7 @@
   .program-committee-page .pc-chair-identity p { font-size: 13px; }
 }
 
-/* Supplied reviewers use a compact academic directory. */
+/* Supplied members use a compact academic directory. */
 .program-committee-page .pc-member-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 32px; margin: 0; padding: 0; list-style: none; }
 .program-committee-page .pc-member { min-width: 0; margin: 0; padding: 4px 0 22px; border-bottom: 1px solid var(--line); scroll-margin-top: 154px; }
 .program-committee-page .pc-member h3 { margin: 0 0 7px; font: 600 17px/1.5 var(--heading); letter-spacing: -.2px; }
