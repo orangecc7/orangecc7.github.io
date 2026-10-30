@@ -3,6 +3,7 @@
   const biographyPanels = Array.from(document.querySelectorAll('.speaker-bio-panel'));
   const biographyHome = document.querySelector('.speaker-biographies');
   const lineup = document.querySelector('.speaker-lineup');
+  if (lineup && biographyHome) {
   const lineupCards = Array.from(lineup.querySelectorAll('.lineup-person'));
   const compactLineup = window.matchMedia('(max-width: 1100px)');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -71,6 +72,7 @@
     placeBiography(panel, trigger);
   });
   document.body.classList.add('people-ready');
+  }
   const overviewButton = document.querySelector('.overview-expand');
   if (overviewButton) overviewButton.addEventListener('click', function () {
     const expanded = overviewButton.getAttribute('aria-expanded') !== 'true';
@@ -105,6 +107,18 @@
     const marker = document.querySelector('.site-nav').getBoundingClientRect().height + 100;
     let active = sections[0];
     sections.forEach(function (section) { if (section.getBoundingClientRect().top <= marker) active = section; });
+    // Short final sections cannot always reach the marker above the footer.
+    if (sections.length && window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
+      active = sections[sections.length - 1];
+      const target = document.getElementById(window.location.hash.slice(1));
+      if (target) {
+        const bounds = target.getBoundingClientRect();
+        if (bounds.top >= document.querySelector('.site-nav').getBoundingClientRect().height && bounds.top < window.innerHeight) {
+          const targetSection = sections.find(function (section) { return section.id !== 'top' && section.contains(target); });
+          if (targetSection) active = targetSection;
+        }
+      }
+    }
     links.forEach(function (link) {
       if (active && link.getAttribute('href') === '#' + active.id) link.setAttribute('aria-current', 'true');
       else link.removeAttribute('aria-current');
@@ -117,5 +131,6 @@
   }
   window.addEventListener('scroll', scheduleNavigationUpdate, { passive: true });
   window.addEventListener('resize', scheduleNavigationUpdate);
+  window.addEventListener('hashchange', scheduleNavigationUpdate);
   updateCurrentSection();
 }());

@@ -1,0 +1,113 @@
+/* Shared presentation for the public workshop and committee pages. */
+.academic-site { background: #fff; }
+.academic-site .nav-links a[aria-current="page"] { color: var(--accent); }
+.academic-site .nav-links a[aria-current="page"]::after { background: var(--accent); }
+.academic-site .footer-links { max-width: 530px; justify-content: flex-end; }
+.academic-site .section-heading-row { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; margin-bottom: 26px; }
+.academic-site .section-heading-row h2 { margin-bottom: 0; }
+.text-link, .organizer-bio-link { font: 600 14px/1.7 var(--heading); }
+.text-link { white-space: nowrap; }
+.academic-site.lineup-home #intro,
+.academic-site.lineup-home #speaker-lineup,
+.academic-site.lineup-home #program,
+.academic-site.lineup-home #cfp,
+.academic-site.lineup-home #dates,
+.academic-site.lineup-home #organizers,
+.academic-site.lineup-home #pc-chairs {
+  margin-bottom: 0;
+  padding: 38px 40px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  background: #fff;
+}
+.academic-site.lineup-home .workshop-hero { border-radius: 3px; }
+.academic-site #organizers .people-grid { gap: 0 30px; margin-top: 0; }
+.academic-site #organizers .person-card { padding: 23px 0 18px; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; }
+.academic-site #organizers .person-card-heading { min-height: 84px; padding-bottom: 8px; }
+.organizer-bio-link { display: inline-block; margin-left: 79px; }
+.track-contact { margin-top: 30px; padding: 22px 0 0; border-top: 1px solid var(--line); }
+.track-contact p { margin: 0; color: var(--blue); font: 500 16px/1.8 var(--heading); overflow-wrap: anywhere; }
+.track-contact strong { margin-right: 5px; }
+.committee-chairs-summary { margin: 0; font-size: 16px; }
+
+.submission-requirements { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 40px; align-items: center; margin-top: 28px; padding-top: 28px; border-top: 1px solid var(--line); }
+.section .submission-requirements h3 { margin: 0 0 15px; font-size: 20px; }
+.submission-requirements p { max-width: 72ch; margin-bottom: 12px; font-size: 16px; }
+.submission-requirements p:last-child { margin-bottom: 0; }
+.submission-requirements strong { color: var(--blue); }
+.submission-action { text-align: right; }
+.academic-site .submission-action .button { min-height: 46px; padding: 11px 18px; gap: 16px; font-size: 14px; }
+.submission-action p { margin-top: 10px; color: var(--body); font: 500 12px/1.6 var(--heading); }
+
+.committee-page main { width: min(calc(100% - 60px), 1100px); min-height: calc(100vh - 245px); margin: 0 auto; padding-bottom: 60px; }
+.committee-header { padding: 54px 0 34px; border-bottom: 1px solid var(--line); }
+.committee-eyebrow { margin-bottom: 16px; color: var(--accent); font: 600 12px/1.7 var(--heading); letter-spacing: 1.6px; text-transform: uppercase; }
+.committee-header h1 { margin: 0 0 16px; color: var(--blue); font: 700 clamp(29px,3vw,39px)/1.2 var(--heading); letter-spacing: -1px; }
+.committee-workshop { max-width: 850px; margin: 0; font: 500 15px/1.8 var(--heading); }
+.committee-workshop a { color: var(--body); }
+.committee-profile { display: grid; grid-template-columns: 235px minmax(0,1fr); gap: 55px; padding: 38px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 100px; }
+.committee-identity { min-width: 0; }
+.committee-identity .portrait-link { display: block; width: 120px; height: 144px; margin-bottom: 18px; }
+.committee-identity .person-photo { width: 120px; height: 144px; object-fit: cover; border-radius: 2px; }
+.committee-identity h2 { margin: 0 0 8px; font: 600 19px/1.5 var(--heading); letter-spacing: -.35px; }
+.committee-identity h2 a { color: var(--blue); }
+.committee-identity p { margin-bottom: 10px; font: 500 14px/1.75 var(--heading); }
+.profile-source { font: 500 13px/1.7 var(--heading); }
+.committee-biography { padding-top: 3px; min-width: 0; }
+.committee-biography p { margin: 0 0 18px; font-size: 16px; line-height: 1.95; overflow-wrap: anywhere; }
+.committee-biography p:last-child { margin-bottom: 0; }
+.committee-page .track-contact { border-top: 0; padding-top: 0; }
+.committee-page main > .committee-section { width: 100%; margin: 0; padding: 34px 0; border-radius: 0; background: #fff; border-bottom: 1px solid var(--line); }
+.committee-page .committee-section > .container { width: 100%; }
+.committee-page .committee-section h2 { margin: 0 0 24px; padding: 0; border: 0; font-size: 24px; }
+.committee-page .pc-chair-grid { margin-top: 0; gap: 35px; }
+.committee-page .pc-chair { padding: 10px 0; border: 0; }
+.committee-page .pc-chair h3 { margin: 0 0 7px; }
+.committee-notice { margin: 0; color: var(--body); font-size: 16px; }
+
+@media (max-width: 1100px) {
+  .academic-site .site-nav, .academic-site .nav-container { min-height: 64px; }
+  .academic-site .nav-container { width: calc(100% - 36px); }
+  .academic-site .site-brand { font-size: 15px; }
+  .academic-site .menu-toggle { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px; width: 40px; height: 36px; padding: 7px; border: 1px solid var(--line); border-radius: 3px; background: #fff; cursor: pointer; }
+  .academic-site .menu-toggle span { display: block; width: 20px; height: 2px; background: var(--blue); }
+  .academic-site .nav-links { display: none; position: absolute; top: 64px; left: 0; width: 100%; align-items: stretch; flex-direction: column; gap: 0; padding: 8px 18px 13px; background: #fff; border-bottom: 1px solid var(--line); }
+  .academic-site .nav-links[data-open="true"] { display: flex; }
+  .academic-site .nav-links a { padding: 11px 0; font-size: 15px; }
+  .academic-site .nav-links a::after { bottom: 5px; right: auto; width: 22px; }
+  .submission-requirements { grid-template-columns: 1fr; gap: 20px; }
+  .submission-action { text-align: left; }
+  .committee-profile { grid-template-columns: 200px minmax(0,1fr); gap: 35px; }
+}
+@media (max-width: 767px) {
+  .academic-site.lineup-home #intro, .academic-site.lineup-home #speaker-lineup, .academic-site.lineup-home #program,
+  .academic-site.lineup-home #cfp, .academic-site.lineup-home #dates, .academic-site.lineup-home #organizers,
+  .academic-site.lineup-home #pc-chairs { padding: 28px 20px; }
+  .academic-site .section-heading-row { align-items: flex-start; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+  .academic-site #organizers .people-grid { gap: 0; }
+  .academic-site .footer-links { justify-content: center; }
+  .committee-page main { width: calc(100% - 36px); padding-bottom: 40px; }
+  .committee-header { padding: 34px 0 26px; }
+  .committee-profile { grid-template-columns: 1fr; gap: 22px; padding: 28px 0; }
+  .committee-identity { display: grid; grid-template-columns: 95px minmax(0,1fr); gap: 0 20px; align-content: start; }
+  .committee-identity .portrait-link { grid-column: 1; grid-row: 1 / 4; width: 95px; height: 114px; margin: 0; }
+  .committee-identity .person-photo { width: 95px; height: 114px; }
+  .committee-identity h2, .committee-identity p, .committee-identity .profile-source { grid-column: 2; }
+  .committee-identity h2 { font-size: 18px; }
+  .committee-identity p { font-size: 13px; }
+  .committee-biography p { font-size: 16px; line-height: 1.85; }
+  .track-contact p { font-size: 14px; }
+  .academic-site .submission-action .button { width: 100%; font-size: 13px; padding-inline: 12px; }
+  .committee-page .pc-chair-grid { grid-template-columns: 1fr; gap: 24px; }
+}
+
+/* Small navigation and continuity improvements, retaining the original identity. */
+.page-breadcrumb{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:22px;color:var(--body);font:500 13px/1.7 var(--heading)}
+.page-breadcrumb [aria-current="page"]{color:var(--blue)}
+.committee-header h1{padding-left:17px;border-left:3px solid var(--accent);font-size:30px;line-height:1.3;letter-spacing:-.7px}
+.committee-context-links{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px 24px;margin-top:22px;font:500 13px/1.8 var(--heading)}
+.committee-page .committee-header{padding-top:30px;padding-bottom:28px}
+.organizer .person-identity h3 a:hover{color:var(--accent)}
+.pc-chair{scroll-margin-top:100px}
+@media(max-width:767px){.committee-header h1{font-size:26px;padding-left:13px}.page-breadcrumb{font-size:12px;gap:8px}.committee-context-links{font-size:12px}.committee-page .committee-header{padding-top:24px}}

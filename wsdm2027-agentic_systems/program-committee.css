@@ -1,0 +1,97 @@
+/* Committee-only refinements; retain the shared workshop identity. */
+.program-committee-page .committee-section .pc-section-layout {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  align-items: start;
+  gap: 36px;
+}
+.program-committee-page .committee-section h2 {
+  margin: 0;
+  padding-top: 5px;
+  font-size: 22px;
+  line-height: 1.4;
+  letter-spacing: -.4px;
+}
+.program-committee-page .pc-chair-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.program-committee-page .pc-chair {
+  min-height: 176px;
+  padding: 24px;
+  background: #f7f9fa;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
+.program-committee-page .pc-chair-heading {
+  grid-template-columns: 92px minmax(0, 1fr);
+  align-items: start;
+  gap: 20px;
+}
+.program-committee-page .pc-chair .portrait-link,
+.program-committee-page .pc-chair .pc-photo {
+  display: block;
+  width: 92px;
+  height: 112px;
+  border-radius: 2px;
+}
+.program-committee-page .pc-chair .pc-photo { object-fit: cover; }
+.program-committee-page .pc-chair-identity { padding-top: 3px; min-width: 0; }
+.program-committee-page .pc-chair h3 {
+  margin: 0 0 8px;
+  color: var(--blue);
+  font: 600 18px/1.45 var(--heading);
+  letter-spacing: -.2px;
+}
+.program-committee-page .pc-chair-identity p {
+  color: var(--body);
+  font: 500 14px/1.75 var(--heading);
+}
+.program-committee-page .pc-chair .profile-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 14px;
+  color: var(--accent);
+  font: 500 13px/1.7 var(--heading);
+}
+.program-committee-page .pc-members-state {
+  padding: 22px 24px;
+  border-left: 2px solid var(--accent);
+  background: #f7f9fa;
+}
+.program-committee-page .pc-members-state .committee-notice {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.8;
+}
+@media (max-width: 1000px) {
+  .program-committee-page .committee-section .pc-section-layout { grid-template-columns: 130px minmax(0, 1fr); gap: 28px; }
+  .program-committee-page .pc-chair-grid { grid-template-columns: 1fr; gap: 16px; }
+  .program-committee-page .pc-chair { min-height: 0; }
+}
+@media (max-width: 767px) {
+  .program-committee-page main > .committee-section { padding-block: 28px; }
+  .program-committee-page .committee-section .pc-section-layout { grid-template-columns: 1fr; gap: 18px; }
+  .program-committee-page .committee-section h2 { padding-top: 0; font-size: 21px; }
+  .program-committee-page .pc-chair { padding: 20px; }
+  .program-committee-page .pc-chair-heading { gap: 18px; }
+  .program-committee-page .pc-members-state { padding: 18px 20px; }
+}
+@media (max-width: 360px) {
+  .program-committee-page .pc-chair { padding: 18px; }
+  .program-committee-page .pc-chair-heading { grid-template-columns: 72px minmax(0, 1fr); gap: 16px; }
+  .program-committee-page .pc-chair .portrait-link,
+  .program-committee-page .pc-chair .pc-photo { width: 72px; height: 90px; }
+  .program-committee-page .pc-chair h3 { font-size: 17px; }
+  .program-committee-page .pc-chair-identity p { font-size: 13px; }
+}
+
+/* Supplied reviewers use a compact academic directory. */
+.program-committee-page .pc-member-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 32px; margin: 0; padding: 0; list-style: none; }
+.program-committee-page .pc-member { min-width: 0; margin: 0; padding: 4px 0 22px; border-bottom: 1px solid var(--line); scroll-margin-top: 154px; }
+.program-committee-page .pc-member h3 { margin: 0 0 7px; font: 600 17px/1.5 var(--heading); letter-spacing: -.2px; }
+.program-committee-page .pc-member-affiliation { margin: 0; color: var(--body); font: 500 14px/1.8 var(--heading); }
+.program-committee-page .pc-member-email { display: inline-block; max-width: 100%; margin-top: 9px; overflow-wrap: anywhere; font: 500 13px/1.8 var(--heading); }
+@media (max-width: 1100px) { .program-committee-page .pc-member { scroll-margin-top: 142px; } }
+@media (max-width: 1000px) { .program-committee-page .pc-member-list { grid-template-columns: 1fr; gap: 18px; } }
