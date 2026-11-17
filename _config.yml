@@ -1,0 +1,67 @@
+title: "Yuechen Zhang (Orange)"
+description: "Yuechen Zhang's research in AIGC detection and LLM safety, with an interest in world models."
+url: "https://orangecc7.github.io"
+baseurl: ""
+repository: "orangecc7/orangecc7.github.io"
+timezone: Asia/Shanghai
+locale: en
+
+author:
+  name: Yuechen Zhang
+  nickname: Orange
+  avatar: /images/self.jpg
+  bio: Undergraduate
+  affiliation: Jiangnan University
+  email: orange.zhangyc05@gmail.com
+  wechat: "orange_ychen"
+  qq: "3132454640"
+  github: orangecc7
+  googlescholar: "https://scholar.google.com.hk/citations?user=-uFjG4EAAAAJ&hl=en"
+  advisor_scholar: "https://scholar.google.com.hk/citations?user=df8FxPAAAAAJ&hl=en"
+
+# Citation crawling and analytics remain inactive until explicitly configured.
+google_scholar_stats_use_cdn: false
+
+include:
+  - _pages
+exclude:
+  - docs
+  - google_scholar_crawler
+  - .github
+  - .bundle
+  - .sass-cache
+  - .jekyll-cache
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - DESIGN.md
+  - run_server.sh
+  - scripts
+  - vendor
+  - node_modules
+  - assets/js/_main.js
+  - assets/js/plugins
+  - assets/js/vendor
+  - tmp
+encoding: utf-8
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  syntax_highlighter: rouge
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+      author_profile: true
+sass:
+  sass_dir: _sass
+  style: compressed
+plugins:
+  - jekyll-sitemap
+  - jekyll-redirect-from

@@ -1,0 +1,21 @@
+{% case include.name %}
+{% when 'mail' %}{% include icons/phosphor/envelope-simple-fill.svg %}
+{% when 'wechat' %}{% include icons/phosphor/wechat-logo-fill.svg %}
+{% when 'qq' %}{% include icons/phosphor/chat-circle-text-fill.svg %}
+{% when 'github' %}{% include icons/phosphor/github-logo-fill.svg %}
+{% when 'scholar' %}{% include icons/phosphor/graduation-cap-fill.svg %}
+{% when 'code' %}{% include icons/phosphor/code-fill.svg %}
+{% when 'news' %}<img class="icon icon--heading" src="{{ '/assets/icons/headings/news.png' | relative_url }}" width="24" height="24" alt="" aria-hidden="true">
+{% when 'research' %}<img class="icon icon--heading" src="{{ '/assets/icons/headings/publications.png' | relative_url }}" width="24" height="24" alt="" aria-hidden="true">
+{% when 'education' %}<img class="icon icon--heading" src="{{ '/assets/icons/headings/education.png' | relative_url }}" width="24" height="24" alt="" aria-hidden="true">
+{% when 'projects' %}<img class="icon icon--heading" src="{{ '/assets/icons/headings/projects.png' | relative_url }}" width="24" height="24" alt="" aria-hidden="true">
+{% when 'aigc' %}<img class="icon icon--heading" src="{{ '/assets/icons/headings/aigc-detection.png' | relative_url }}" width="24" height="24" alt="" aria-hidden="true">
+{% when 'safety' %}{% include icons/headings/llm-safety.svg %}
+{% when 'worlds' %}<img class="icon icon--heading" src="{{ '/assets/icons/headings/world-models.png' | relative_url }}" width="24" height="24" alt="" aria-hidden="true">
+{% when 'paper' %}{% include icons/phosphor/file-text-fill.svg %}
+{% when 'external' %}{% include icons/phosphor/arrow-up-right-fill.svg %}
+{% when 'sun' %}{% include icons/phosphor/sun-fill.svg %}
+{% when 'moon' %}{% include icons/phosphor/moon-fill.svg %}
+{% when 'close' %}{% include icons/phosphor/x-fill.svg %}
+{% when 'expand' %}{% include icons/phosphor/corners-out-fill.svg %}
+{% endcase %}

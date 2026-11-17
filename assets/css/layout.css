@@ -1,0 +1,57 @@
+/* Typography and spacing shared with the refined ccandtt profile.
+   Orange's palette, content, portrait crop and interactions remain in profile.css. */
+:root {
+  --ui-unit: 1px;
+  --page-width: 1180px;
+  --sidebar-width: 196px;
+  --column-gap: 28px;
+  --font-display: 40px;
+  --font-display-compact: 34px;
+  --font-profile-title: 24px;
+  --font-section: 23px;
+  --font-publications: 25px;
+  --font-topic: 20px;
+  --font-paper: 18px;
+  --font-subheading: 18px;
+  --font-body: 16px;
+  --font-text: 15px;
+  --font-small: 14px;
+  --font-meta: 13px;
+  --font-label: 12px;
+}
+
+#main { grid-template-columns: var(--sidebar-width) minmax(0, 1fr); gap: var(--column-gap); }
+.masthead__inner-wrap { grid-template-columns: var(--sidebar-width) minmax(0, 1fr) auto; gap: var(--column-gap); }
+@media (min-width: 1101px) {
+  :root { --sidebar-shift: clamp(0px, calc(50vw - 605px), 24px); }
+  .sidebar, .site-brand { margin-left: calc(-1 * var(--sidebar-shift)); margin-right: var(--sidebar-shift); }
+}
+.page__content .intro p { max-width: 850px; }
+.paper-box { grid-template-columns: 236px minmax(0, 1fr); gap: 24px; }
+.framework-preview { height: 166px; }
+@media (max-width: 1100px) {
+  :root { --sidebar-width: 176px; --column-gap: 24px; }
+  .paper-box { grid-template-columns: 190px minmax(0, 1fr); gap: 20px; }
+}
+@media (min-width: 701px) and (max-width: 960px) {
+  :root { --sidebar-width: 156px; --column-gap: 20px; }
+}
+@media (max-width: 700px) {
+  .masthead__inner-wrap { grid-template-columns: 1fr auto; gap: calc(6 * var(--ui-unit)) calc(16 * var(--ui-unit)); }
+  #main { gap: var(--space-8); }
+  .site-navigation a { font-size: 14px; }
+}
+@media (max-width: 580px) {
+  .paper-box { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .framework-preview { height: auto; }
+}
+@media (min-width: 701px) and (max-width: 860px) {
+  .paper-box { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .framework-preview { height: auto; aspect-ratio: 1.9; }
+}
+
+@media (min-width: 701px) {
+  .author__avatar { width: min(176px, var(--sidebar-width)); height: min(176px, var(--sidebar-width)); }
+}
+.author__content .author__bio { margin-top: var(--space-3); }
+.author__content .author__affiliation { margin-top: var(--space-2); line-height: 1.8; }

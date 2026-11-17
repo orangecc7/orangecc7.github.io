@@ -1,0 +1,20 @@
+<div class="profile_box" itemscope itemtype="https://schema.org/Person">
+  <div class="author__avatar"><div class="author__avatar-crop" style="--portrait-image: url('{{ site.author.avatar | relative_url }}')"><img src="{{ site.author.avatar | relative_url }}" alt="Portrait of {{ site.author.name }}" width="160" height="160"></div></div>
+  <div class="author__content">
+    <h2 class="author__name" itemprop="name">{{ site.author.name }}</h2>
+    <p class="author__nickname">({{ site.author.nickname }})</p>
+    <p class="author__bio">{{ site.author.bio }}</p>
+    <p class="author__affiliation">{{ site.author.affiliation }}</p>
+  </div>
+  <nav class="profile-contact" aria-label="Contact and academic profiles">
+    <ul>
+      {% if site.author.email %}<li><a class="contact-link" href="mailto:{{ site.author.email }}">{% include icon.html name="mail" %}<span>Email</span></a></li>{% endif %}
+      {% if site.author.wechat %}<li><a class="contact-link" id="wechat-contact" href="#wechat-contact" data-copy-contact="{{ site.author.wechat }}" data-copy-label="WeChat ID" aria-label="Copy WeChat ID {{ site.author.wechat }}" title="Copy WeChat ID">{% include icon.html name="wechat" %}<span>WeChat</span></a></li>{% endif %}
+      {% if site.author.qq %}<li><a class="contact-link" id="qq-contact" href="#qq-contact" data-copy-contact="{{ site.author.qq }}" data-copy-label="QQ number" aria-label="Copy QQ number {{ site.author.qq }}" title="Copy QQ number">{% include icon.html name="qq" %}<span>QQ</span></a></li>{% endif %}
+      {% if site.author.github %}<li><a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener noreferrer">{% include icon.html name="github" %}<span>GitHub</span></a></li>{% endif %}
+      {% if site.author.googlescholar %}<li><a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener noreferrer">{% include icon.html name="scholar" %}<span>Google Scholar</span></a></li>{% endif %}
+    </ul>
+    <p class="contact-toast" role="status" aria-live="polite" aria-atomic="true"></p>
+  </nav>
+  <p class="profile-note"><span class="note-label" aria-label="Research interests">Research</span>AIGC Detection<br>LLM Safety<br><span class="note-learning">World Models(learning)</span></p>
+</div>
